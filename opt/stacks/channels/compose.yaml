@@ -1,0 +1,12 @@
+services:
+  channels-dvr:
+    image: fancybits/channels-dvr:latest
+    container_name: channels-dvr
+    network_mode: host
+    restart: unless-stopped
+    devices:
+      - /dev/dri:/dev/dri
+    volumes:
+      - /docker/channels/config:/channels-dvr
+      - /mnt/dvr:/shares
+networks: {}

@@ -1,0 +1,26 @@
+services:
+  ps5-mqtt:
+    image: ghcr.io/funkeyflo/ps5-mqtt/amd64:latest
+    container_name: ps5-mqtt
+    restart: unless-stopped
+    network_mode: host
+    entrypoint: /config/entrypoint.sh
+    environment:
+      - MQTT_HOST=10.0.0.94
+      - MQTT_PORT=1883
+      - MQTT_USERNAME=zackwag
+      - MQTT_PASSWORD=REDACTED
+      - DEVICE_CHECK_INTERVAL=5000
+      - DEVICE_DISCOVERY_INTERVAL=60000
+      - ACCOUNT_CHECK_INTERVAL=5000
+      - INCLUDE_PS4_DEVICES=false
+      - FRONTEND_PORT=8645
+      - CREDENTIAL_STORAGE_PATH=/config/credentials.json
+    volumes:
+      - /docker/ps5-mqtt/config:/config
+    healthcheck:
+      test: ls -l /proc/*/exe | grep node
+      interval: 5m00s
+      timeout: 10s
+      retries: 2
+      start_period: 30s

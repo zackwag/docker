@@ -1,0 +1,12 @@
+services:
+  guacamole:
+    image: jwetzell/guacamole:latest
+    container_name: guacamole
+    restart: unless-stopped
+    ports:
+      - 5307:8080
+    environment:
+      - EXTENSIONS=auth-totp
+    volumes:
+      - /docker/guacamole/config:/config
+networks: {}

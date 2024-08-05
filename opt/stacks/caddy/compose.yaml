@@ -1,0 +1,19 @@
+services:
+  caddy:
+    image: caddy:latest
+    container_name: caddy
+    restart: unless-stopped
+    security_opt:
+      - label:disable
+    ports:
+      - 80:80
+      - 443:443
+    environment:
+      - TZ=America/New_York
+      - EMAIL=zack@zackwag.com
+      - DOMAIN=zackwag.com
+    volumes:
+      - /docker/caddy/Caddyfile:/etc/caddy/Caddyfile
+      - /docker/caddy/data:/data
+      - /docker/caddy/config:/config
+networks: {}
