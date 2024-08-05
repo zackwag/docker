@@ -22,3 +22,10 @@ docker compose up -d
 ```
 
 4. Download files from this repo to `/opt/stacks`
+
+## Update Dockge
+
+```bash
+cd /opt/dockge
+docker compose pull && docker compose up -d
+```
