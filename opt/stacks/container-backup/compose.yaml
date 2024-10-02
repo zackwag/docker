@@ -9,15 +9,8 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock:ro
       - /docker/container-backup/config:/app/config
       - /docker:/source
-      - onedrive-backup:/destination
+      - /onedrive/backup:/destination
     environment:
       - PYTHONUNBUFFERED=1
       - TZ=America/New_York
-volumes:
-  onedrive-backup:
-    driver: rclone
-    driver_opts:
-      remote: onedrive:backup
-      allow_other: "true"
-      vfs-cache-mode: writes
 networks: {}
