@@ -1,0 +1,29 @@
+services:
+  icecast:
+    image: infiniteproject/icecast
+    container_name: icecast
+    restart: unless-stopped
+    ports:
+      - 1535:8000
+    environment:
+      - ICECAST_SOURCE_PASSWORD=hackme
+      - ICECAST_ADMIN_PASSWORD=adminpass
+      - ICECAST_PASSWORD=listenerpass
+      - ICECAST_HOSTNAME=localhost
+      - ICECAST_PORT=8000
+    volumes:
+      - /docker/icecast/config:/etc/icecast2
+  darkice:
+    image: jwater7/darkice
+    container_name: darkice
+    privileged: true
+    restart: unless-stopped
+    depends_on:
+      - icecast
+    environment:
+      - DARKICE_CONFIG=/etc/darkice.cfg
+    volumes:
+      - /docker/darkice/config/darkice.cfg:/etc/darkice.cfg
+    devices:
+      - /dev/snd:/dev/snd
+networks: {}
