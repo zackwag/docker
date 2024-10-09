@@ -1,6 +1,6 @@
 services:
   icecast:
-    image: infiniteproject/icecast
+    image: infiniteproject/icecast:latest
     container_name: icecast
     restart: unless-stopped
     ports:
@@ -12,9 +12,9 @@ services:
       - ICECAST_HOSTNAME=localhost
       - ICECAST_PORT=8000
     volumes:
-      - /docker/icecast/config:/etc/icecast2
+      - /docker/icecast/config/icecast.xml:/etc/icecast.xml
   darkice:
-    image: jwater7/darkice
+    image: jwater7/darkice:latest
     container_name: darkice
     privileged: true
     restart: unless-stopped
