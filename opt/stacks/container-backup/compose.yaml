@@ -9,8 +9,13 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock:ro
       - /docker/container-backup/config:/app/config
       - /docker:/source
-      - /onedrive/backup:/destination
+      - onedrive:/destination
     environment:
       - PYTHONUNBUFFERED=1
       - TZ=America/New_York
 networks: {}
+volumes:
+  onedrive:
+    driver: rclone
+    driver_opts:
+      remote: onedrive:/backup
