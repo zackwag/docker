@@ -13,6 +13,7 @@ services:
       - ICECAST_PORT=8000
     volumes:
       - /docker/icecast/config/icecast.xml:/etc/icecast.xml
+      - /docker/icecast/web/cover.png:/usr/share/icecast/web/cover.png
   darkice:
     image: jwater7/darkice:latest
     container_name: darkice
