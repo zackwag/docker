@@ -1,0 +1,13 @@
+services:
+  authelia:
+    image: authelia/authelia:latest
+    container_name: authelia
+    restart: unless-stopped
+    ports:
+      - 9091:9091
+    volumes:
+      - /docker/authelia/config:/config
+    environment:
+      TZ: America/New_York
+networks: {}
+
