@@ -1,4 +1,5 @@
 services:
+  # -------- Caddy Server --------
   caddy:
     image: caddy:latest
     container_name: caddy
@@ -16,4 +17,44 @@ services:
       - /docker/caddy/Caddyfile:/etc/caddy/Caddyfile
       - /docker/caddy/data:/data
       - /docker/caddy/config:/config
-networks: {}
+    networks:
+      - caddynet
+  # -------- Caddy Manager Backend --------
+  backend:
+    image: caddymanager/caddymanager-backend:latest
+    container_name: caddymanager-backend
+    restart: unless-stopped
+    environment:
+      - PORT=3000
+      - DB_ENGINE=sqlite
+      - SQLITE_DB_PATH=/app/data/caddymanager.sqlite
+      - CADDY_SANDBOX_URL=http://caddy:2019
+      - CORS_ORIGIN=http://localhost:5732
+      - LOG_LEVEL=info
+      - JWT_SECRET=[REDACTED]
+      - JWT_EXPIRATION=24h
+    volumes:
+      - sqlite_data:/app/data
+    networks:
+      - caddynet
+  # -------- Caddy Manager Frontend --------
+  frontend:
+    image: caddymanager/caddymanager-frontend:latest
+    container_name: caddymanager-frontend
+    restart: unless-stopped
+    depends_on:
+      - backend
+    environment:
+      - BACKEND_HOST=backend:3000
+      - APP_NAME=Caddy Manager
+      - DARK_MODE=true
+    ports:
+      - 5732:80
+    networks:
+      - caddynet
+# -------- Network & Volumes --------
+networks:
+  caddynet:
+    driver: bridge
+volumes:
+  sqlite_data: null
