@@ -1,0 +1,22 @@
+services:
+  transfersh:
+    image: dutchcoders/transfer.sh:edge
+    container_name: transfersh
+    restart: unless-stopped
+    ports:
+      - 9097:8080
+    environment:
+      PROVIDER: local
+      BASEDIR: /data
+      WEB_PATH: /web
+      LISTENER: :8080
+      MAX_UPLOAD_SIZE: 1048576 # 1GB in KB
+      PURGE_DAYS: 7
+      PURGE_INTERVAL: 24
+      RATE_LIMIT: 30
+      RANDOM_TOKEN_LENGTH: 16
+    volumes:
+      - /docker/transfersh/data:/data
+      - /docker/transfersh/web:/web
+    networks: {}
+networks: {}
