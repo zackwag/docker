@@ -12,8 +12,49 @@ services:
       - TZ=America/New_York
       - EMAIL=zack@zackwag.com
       - DOMAIN=zackwag.com
+      - CADDY_ADMIN=0.0.0.0:2019
     volumes:
       - /docker/caddy/Caddyfile:/etc/caddy/Caddyfile
       - /docker/caddy/data:/data
       - /docker/caddy/config:/config
-networks: {}
+      - /docker/caddy/logs:/var/log/caddy
+    networks:
+      - caddy-ui
+  caddy-ui-backend:
+    image: zackwag/caddy-ui-backend
+    container_name: caddy-ui-backend
+    restart: unless-stopped
+    security_opt:
+      - label:disable
+    ports:
+      - 9876:3001
+    environment:
+      - TZ=America/New_York
+      - PORT=3001
+      - CADDY_ADMIN_URL=http://caddy:2019
+      - CADDYFILE_PATH=/etc/caddy/Caddyfile
+      - CADDY_LOG_PATH=/var/log/caddy/access.log
+      - SERVER_NAMES_PATH=/etc/caddy-ui/server-names.json
+    volumes:
+      - /docker/caddy/Caddyfile:/etc/caddy/Caddyfile
+      - /docker/caddy/logs:/var/log/caddy
+      - /docker/caddy-ui:/etc/caddy-ui
+    networks:
+      - caddy-ui
+    depends_on:
+      - caddy
+  caddy-ui-frontend:
+    image: zackwag/caddy-ui-frontend
+    container_name: caddy-ui-frontend
+    restart: unless-stopped
+    security_opt:
+      - label:disable
+    ports:
+      - 9877:80
+    networks:
+      - caddy-ui
+    depends_on:
+      - caddy-ui-backend
+networks:
+  caddy-ui:
+    driver: bridge
