@@ -1,0 +1,68 @@
+[
+    {
+        "container_name": "adguard",
+        "source_folder": "/source/adguard",
+        "destination_folder": "/destination/adguard",
+        "retention_days": 7
+    },
+    {
+        "container_name": "authelia",
+        "source_folder": "/source/authelia",
+        "destination_folder": "/destination/authelia",
+        "retention_days": 7
+    },
+    {
+        "container_name": "caddy",
+        "source_folder": "/source/caddy",
+        "destination_folder": "/destination/caddy",
+        "retention_days": 7
+    },
+    {
+        "container_name": "caddy-ui-backend",
+        "source_folder": "/source/caddy-ui",
+        "destination_folder": "/destination/caddy-ui",
+        "retention_days": 7
+    },
+    {
+        "container_name": "darkice",
+        "source_folder": "/source/darkice",
+        "destination_folder": "/destination/darkice",
+        "retention_days": 7
+    },
+    {
+        "container_name": "guacamole",
+        "source_folder": "/source/guacamole",
+        "destination_folder": "/destination/guacamole",
+        "retention_days": 7
+    },
+    {
+        "container_name": "icecast",
+        "source_folder": "/source/icecast",
+        "destination_folder": "/destination/icecast",
+        "retention_days": 7
+    },
+    {
+        "container_name": "prometheus",
+        "source_folder": "/source/prometheus",
+        "destination_folder": "/destination/prometheus",
+        "retention_days": 7
+    },
+    {
+        "container_name": "slash",
+        "source_folder": "/source/slash",
+        "destination_folder": "/destination/slash",
+        "retention_days": 7
+    },
+    {
+        "container_name": "transfersh",
+        "source_folder": "/source/transfersh/web",
+        "destination_folder": "/destination/transfersh",
+        "retention_days": 7
+    },
+    {
+        "container_name": "writefreely",
+        "source_folder": "/source/writefreely",
+        "destination_folder": "/destination/writefreely",
+        "retention_days": 7
+    }
+]
