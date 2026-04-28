@@ -1,0 +1,44 @@
+[
+    {
+        "container_name": "darkice",
+        "source_folder": "/source/darkice",
+        "destination_folder": "/destination/darkice",
+        "retention_days": 7
+    },
+    {
+        "container_name": "homepage",
+        "source_folder": "/source/homepage",
+        "destination_folder": "/destination/homepage",
+        "retention_days": 7
+    },
+    {
+        "container_name": "mlbserver",
+        "source_folder": "/source/mlbserver",
+        "destination_folder": "/destination/mlbserver",
+        "retention_days": 7
+    },
+    {
+        "container_name": "icecast",
+        "source_folder": "/source/icecast",
+        "destination_folder": "/destination/icecast",
+        "retention_days": 7
+    },
+    {
+        "container_name": "slash",
+        "source_folder": "/source/slash",
+        "destination_folder": "/destination/slash",
+        "retention_days": 7
+    },
+    {
+        "container_name": "transfersh",
+        "source_folder": "/source/transfersh/web",
+        "destination_folder": "/destination/transfersh",
+        "retention_days": 7
+    },
+    {
+        "container_name": "writefreely",
+        "source_folder": "/source/writefreely",
+        "destination_folder": "/destination/writefreely",
+        "retention_days": 7
+    }
+]

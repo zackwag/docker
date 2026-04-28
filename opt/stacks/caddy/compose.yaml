@@ -1,0 +1,64 @@
+services:
+  caddy:
+    image: caddy:latest
+    container_name: caddy
+    restart: unless-stopped
+    security_opt:
+      - label:disable
+    ports:
+      - 80:80
+      - 443:443
+    environment:
+      - CADDY_LOG_PATH=/var/log/caddy/access.log
+      - DOMAIN=zackwag.com
+      - EMAIL=zack@zackwag.com
+      - INTERNAL_TLD=home
+      - TZ=America/New_York
+      - UPSTREAM_ADGUARD=192.168.4.88
+      - UPSTREAM_CADDY=192.168.4.89
+      - UPSTREAM_DOCKGE=192.168.4.76
+      - UPSTREAM_HA=192.168.4.90
+      - UPSTREAM_PROMETHEUS=192.168.4.75
+      - UPSTREAM_PVE=192.168.4.67
+      - URI_HOME_ASSISTANT_CLOUD=https://0oe2it8s8zprxdyk18wlgkop1nck791h.ui.nabu.casa/
+    volumes:
+      - /docker/caddy/Caddyfile:/etc/caddy/Caddyfile
+      - /docker/caddy/data:/data
+      - /docker/caddy/config:/config
+      - /docker/caddy/logs:/var/log/caddy
+    networks:
+      - caddy-ui
+  caddy-ui-backend:
+    image: zackwag/caddy-ui-backend:latest
+    container_name: caddy-ui-backend
+    restart: unless-stopped
+    security_opt:
+      - label:disable
+    ports:
+      - 9876:3001
+    environment:
+      - TZ=America/New_York
+    volumes:
+      - /docker/caddy/Caddyfile:/etc/caddy/Caddyfile
+      - /docker/caddy/logs:/var/log/caddy
+      - /docker/caddy-ui:/etc/caddy-ui
+      - /docker/caddy/data:/data/caddy
+    networks:
+      - caddy-ui
+    depends_on:
+      - caddy
+  caddy-ui-frontend:
+    image: zackwag/caddy-ui-frontend:latest
+    container_name: caddy-ui-frontend
+    restart: unless-stopped
+    security_opt:
+      - label:disable
+    ports:
+      - 9877:80
+    networks:
+      - caddy-ui
+    depends_on:
+      - caddy-ui-backend
+networks:
+  caddy-ui:
+    driver: bridge

@@ -1,0 +1,23 @@
+services:
+  mlbserver:
+    image: tonywagner/mlbserver:latest
+    container_name: mlbserver
+    restart: unless-stopped
+    ports:
+      - 3134:9999
+    volumes:
+      - /docker/mlbserver/data:/mlbserver/data_directory
+    environment:
+      - TZ=America/New_York
+      - account_username=${MLB_USERNAME}
+      - account_password=${MLB_PASSWORD}
+      - fav_teams=PHI
+  fastchannels:
+    image: ghcr.io/kineticman/fastchannels:latest
+    container_name: fastchannels
+    restart: unless-stopped
+    ports:
+      - 3135:5523
+    volumes:
+      - /docker/fast_channels/data:/data
+networks: {}

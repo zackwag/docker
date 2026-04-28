@@ -1,0 +1,14 @@
+[
+    {
+        "container_name": "caddy",
+        "source_folder": "/source/caddy",
+        "destination_folder": "/destination/caddy",
+        "retention_days": 7
+    },
+    {
+        "container_name": "caddy-ui-backend",
+        "source_folder": "/source/caddy-ui",
+        "destination_folder": "/destination/caddy-ui",
+        "retention_days": 7
+    }
+]

@@ -1,0 +1,10 @@
+services:
+  writefreely:
+    image: algernon/writefreely:latest
+    container_name: writefreely
+    restart: unless-stopped
+    ports:
+      - 8250:8080
+    volumes:
+      - /docker/writefreely/data:/data
+networks: {}

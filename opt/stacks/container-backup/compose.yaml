@@ -1,0 +1,22 @@
+services:
+  container-backup:
+    image: zackwag/flask-container-backup:latest
+    container_name: container-backup
+    restart: unless-stopped
+    ports:
+      - 2128:2128
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - /docker/container-backup/config:/app/config
+      - /docker:/source
+      - onedrive:/destination
+    environment:
+      - PYTHONUNBUFFERED=1
+      - TZ=America/New_York
+      - MODE=hub
+networks: {}
+volumes:
+  onedrive:
+    driver: rclone
+    driver_opts:
+      remote: Onedrive:/backup

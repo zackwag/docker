@@ -1,0 +1,11 @@
+services:
+  channels2mqtt:
+    image: zackwag/channels2mqtt:latest
+    container_name: channels2mqtt
+    restart: unless-stopped
+    environment:
+      - CHANNELS_HOST=192.168.4.25
+      - MQTT_HOST=192.168.4.90
+      - MQTT_USER=${HA_USERNAME}
+      - MQTT_PASS=${HA_PASSWORD}
+networks: {}

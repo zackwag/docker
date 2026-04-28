@@ -1,0 +1,10 @@
+services:
+  slash:
+    image: yourselfhosted/slash:latest
+    container_name: slash
+    restart: unless-stopped
+    ports:
+      - 5006:5231
+    volumes:
+      - /docker/slash:/var/opt/slash
+networks: {}
