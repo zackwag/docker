@@ -18,10 +18,13 @@ name = "caddy"
 server = "caddy"
 auto_update = true
 auto_update_all_services = true
-files_on_host = true
-run_directory = "/etc/komodo/stacks/caddy"
+git_provider = "GitHub.com"
+git_account = "zackwag"
+repo = "zackwag/docker"
+branch = "main"
+file_paths = ["opt/stacks/caddy/compose.yaml"]
 environment = """
-UPLOAD_TOKEN=[[UPLOAD_TOKEN]]  # VARIABLE = value
+UPLOAD_TOKEN=[[UPLOAD_TOKEN]]
 """
 
 ##
@@ -33,8 +36,11 @@ server = "Local"
 poll_for_updates = true
 auto_update = true
 auto_update_all_services = true
-files_on_host = true
-run_directory = "/etc/komodo/stacks/channels-addons"
+git_provider = "GitHub.com"
+git_account = "zackwag"
+repo = "zackwag/docker"
+branch = "main"
+file_paths = ["opt/stacks/channels-addons/compose.yaml"]
 environment = """
 MLB_USERNAME=[[MLB_USERNAME]]
 MLB_PASSWORD=[[MLB_PASSWORD]]
@@ -49,8 +55,11 @@ server = "Local"
 poll_for_updates = true
 auto_update = true
 auto_update_all_services = true
-files_on_host = true
-run_directory = "/etc/komodo/stacks/channels2mqtt"
+git_provider = "GitHub.com"
+git_account = "zackwag"
+repo = "zackwag/docker"
+branch = "main"
+file_paths = ["opt/stacks/channels2mqtt/compose.yaml"]
 environment = """
 HA_USERNAME=[[HA_USERNAME]]
 HA_PASSWORD=[[HA_PASSWORD]]
@@ -65,8 +74,11 @@ server = "caddy"
 poll_for_updates = true
 auto_update = true
 auto_update_all_services = true
-files_on_host = true
-run_directory = "/etc/komodo/stacks/container-backup-caddy"
+git_provider = "GitHub.com"
+git_account = "zackwag"
+repo = "zackwag/docker"
+branch = "main"
+file_paths = ["opt/stacks/container-backup-caddy/compose.yaml"]
 
 ##
 
@@ -77,8 +89,11 @@ server = "Local"
 poll_for_updates = true
 auto_update = true
 auto_update_all_services = true
-files_on_host = true
-run_directory = "/etc/komodo/stacks/container-backup-core"
+git_provider = "GitHub.com"
+git_account = "zackwag"
+repo = "zackwag/docker"
+branch = "main"
+file_paths = ["opt/stacks/container-backup-core/compose.yaml"]
 
 ##
 
@@ -89,8 +104,11 @@ server = "Local"
 poll_for_updates = true
 auto_update = true
 auto_update_all_services = true
-files_on_host = true
-run_directory = "/etc/komodo/stacks/homepage"
+git_provider = "GitHub.com"
+git_account = "zackwag"
+repo = "zackwag/docker"
+branch = "main"
+file_paths = ["opt/stacks/homepage/compose.yaml"]
 
 ##
 
@@ -101,8 +119,11 @@ server = "Local"
 poll_for_updates = true
 auto_update = true
 auto_update_all_services = true
-files_on_host = true
-run_directory = "/etc/komodo/stacks/it-tools"
+git_provider = "GitHub.com"
+git_account = "zackwag"
+repo = "zackwag/docker"
+branch = "main"
+file_paths = ["opt/stacks/it-tools/compose.yaml"]
 
 ##
 
@@ -113,8 +134,11 @@ server = "Local"
 poll_for_updates = true
 auto_update = true
 auto_update_all_services = true
-files_on_host = true
-run_directory = "/etc/komodo/stacks/radio"
+git_provider = "GitHub.com"
+git_account = "zackwag"
+repo = "zackwag/docker"
+branch = "main"
+file_paths = ["opt/stacks/radio/compose.yaml"]
 
 ##
 
@@ -125,8 +149,11 @@ server = "Local"
 poll_for_updates = true
 auto_update = true
 auto_update_all_services = true
-files_on_host = true
-run_directory = "/etc/komodo/stacks/slash"
+git_provider = "GitHub.com"
+git_account = "zackwag"
+repo = "zackwag/docker"
+branch = "main"
+file_paths = ["opt/stacks/slash/compose.yaml"]
 
 ##
 
@@ -137,8 +164,11 @@ server = "Local"
 poll_for_updates = true
 auto_update = true
 auto_update_all_services = true
-files_on_host = true
-run_directory = "/etc/komodo/stacks/transfersh"
+git_provider = "GitHub.com"
+git_account = "zackwag"
+repo = "zackwag/docker"
+branch = "main"
+file_paths = ["opt/stacks/transfersh/compose.yaml"]
 
 ##
 
@@ -149,8 +179,11 @@ server = "Local"
 poll_for_updates = true
 auto_update = true
 auto_update_all_services = true
-files_on_host = true
-run_directory = "/etc/komodo/stacks/writefreely"
+git_provider = "GitHub.com"
+git_account = "zackwag"
+repo = "zackwag/docker"
+branch = "main"
+file_paths = ["opt/stacks/writefreely/compose.yaml"]
 
 ##
 
