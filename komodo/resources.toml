@@ -22,7 +22,7 @@ git_provider = "GitHub.com"
 git_account = "zackwag"
 repo = "zackwag/docker"
 branch = "main"
-file_paths = ["opt/stacks/caddy/compose.yaml"]
+file_paths = ["stacks/caddy/compose.yaml"]
 environment = """
 UPLOAD_TOKEN=[[UPLOAD_TOKEN]]
 """
@@ -40,7 +40,7 @@ git_provider = "GitHub.com"
 git_account = "zackwag"
 repo = "zackwag/docker"
 branch = "main"
-file_paths = ["opt/stacks/channels-addons/compose.yaml"]
+file_paths = ["stacks/channels-addons/compose.yaml"]
 environment = """
 MLB_USERNAME=[[MLB_USERNAME]]
 MLB_PASSWORD=[[MLB_PASSWORD]]
@@ -59,7 +59,7 @@ git_provider = "GitHub.com"
 git_account = "zackwag"
 repo = "zackwag/docker"
 branch = "main"
-file_paths = ["opt/stacks/channels2mqtt/compose.yaml"]
+file_paths = ["stacks/channels2mqtt/compose.yaml"]
 environment = """
 HA_USERNAME=[[HA_USERNAME]]
 HA_PASSWORD=[[HA_PASSWORD]]
@@ -78,7 +78,7 @@ git_provider = "GitHub.com"
 git_account = "zackwag"
 repo = "zackwag/docker"
 branch = "main"
-file_paths = ["opt/stacks/container-backup-caddy/compose.yaml"]
+file_paths = ["stacks/container-backup-caddy/compose.yaml"]
 
 ##
 
@@ -93,7 +93,7 @@ git_provider = "GitHub.com"
 git_account = "zackwag"
 repo = "zackwag/docker"
 branch = "main"
-file_paths = ["opt/stacks/container-backup-core/compose.yaml"]
+file_paths = ["stacks/container-backup-core/compose.yaml"]
 
 ##
 
@@ -108,7 +108,7 @@ git_provider = "GitHub.com"
 git_account = "zackwag"
 repo = "zackwag/docker"
 branch = "main"
-file_paths = ["opt/stacks/homepage/compose.yaml"]
+file_paths = ["stacks/homepage/compose.yaml"]
 
 ##
 
@@ -123,7 +123,7 @@ git_provider = "GitHub.com"
 git_account = "zackwag"
 repo = "zackwag/docker"
 branch = "main"
-file_paths = ["opt/stacks/it-tools/compose.yaml"]
+file_paths = ["stacks/it-tools/compose.yaml"]
 
 ##
 
@@ -138,7 +138,7 @@ git_provider = "GitHub.com"
 git_account = "zackwag"
 repo = "zackwag/docker"
 branch = "main"
-file_paths = ["opt/stacks/radio/compose.yaml"]
+file_paths = ["stacks/radio/compose.yaml"]
 
 ##
 
@@ -153,7 +153,7 @@ git_provider = "GitHub.com"
 git_account = "zackwag"
 repo = "zackwag/docker"
 branch = "main"
-file_paths = ["opt/stacks/slash/compose.yaml"]
+file_paths = ["stacks/slash/compose.yaml"]
 
 ##
 
@@ -168,7 +168,7 @@ git_provider = "GitHub.com"
 git_account = "zackwag"
 repo = "zackwag/docker"
 branch = "main"
-file_paths = ["opt/stacks/transfersh/compose.yaml"]
+file_paths = ["stacks/transfersh/compose.yaml"]
 
 ##
 
@@ -183,7 +183,7 @@ git_provider = "GitHub.com"
 git_account = "zackwag"
 repo = "zackwag/docker"
 branch = "main"
-file_paths = ["opt/stacks/writefreely/compose.yaml"]
+file_paths = ["stacks/writefreely/compose.yaml"]
 
 ##
 
