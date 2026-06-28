@@ -12,7 +12,7 @@ services:
       - CADDY_LOG_PATH=/var/log/caddy/access.log
       - DOMAIN=zackwag.com
       - EMAIL=zack@zackwag.com
-      - INTERNAL_TLD=home
+      - INTERNAL_TLD=internal
       - TZ=America/New_York
       - UPSTREAM_ADGUARD=192.168.4.88
       - UPSTREAM_CADDY=192.168.4.87
