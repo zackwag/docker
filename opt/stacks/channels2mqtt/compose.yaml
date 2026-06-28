@@ -8,4 +8,3 @@ services:
       - MQTT_HOST=192.168.4.90
       - MQTT_USER=${HA_USERNAME}
       - MQTT_PASS=${HA_PASSWORD}
-networks: {}

@@ -26,4 +26,3 @@ services:
       - /docker/darkice/config/darkice.cfg:/etc/darkice.cfg
     devices:
       - /dev/snd:/dev/snd
-networks: {}

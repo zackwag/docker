@@ -1,13 +1,13 @@
 services:
-  container-backup:
+  container-backup-core:
     image: zackwag/flask-container-backup:latest
-    container_name: container-backup
+    container_name: container-backup-core
     restart: unless-stopped
     ports:
       - 2128:2128
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
-      - /docker/container-backup/config:/app/config
+      - /docker/container-backup-core/config:/app/config
       - /docker:/source
       - onedrive:/destination
     environment:

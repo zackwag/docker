@@ -7,4 +7,3 @@ services:
       - 8250:8080
     volumes:
       - /docker/writefreely/data:/data
-networks: {}

@@ -20,4 +20,3 @@ services:
       - 3135:5523
     volumes:
       - /docker/fast_channels/data:/data
-networks: {}

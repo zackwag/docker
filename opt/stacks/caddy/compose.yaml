@@ -15,11 +15,14 @@ services:
       - INTERNAL_TLD=home
       - TZ=America/New_York
       - UPSTREAM_ADGUARD=192.168.4.88
-      - UPSTREAM_CADDY=192.168.4.89
-      - UPSTREAM_DOCKGE=192.168.4.76
+      - UPSTREAM_CADDY=192.168.4.87
+      - UPSTREAM_CHANNELS=192.168.4.25
+      - UPSTREAM_KOMODO=192.168.4.70
       - UPSTREAM_HA=192.168.4.90
+      - UPSTREAM_MAC_MINI=192.168.4.77
       - UPSTREAM_PROMETHEUS=192.168.4.75
       - UPSTREAM_PVE=192.168.4.67
+      - UPLOAD_TOKEN=${UPLOAD_TOKEN}
       - URI_HOME_ASSISTANT_CLOUD=https://0oe2it8s8zprxdyk18wlgkop1nck791h.ui.nabu.casa/
     volumes:
       - /docker/caddy/Caddyfile:/etc/caddy/Caddyfile
