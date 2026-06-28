@@ -206,7 +206,7 @@ executions = [
 name = "Global Auto Update"
 description = "Pulls and auto updates Stacks and Deployments using 'poll_for_updates' or 'auto_update'."
 tags = ["system"]
-config.schedule = "Every day at 03:00"
+config.schedule = "Every day at 05:00"
 
 [[procedure.config.stage]]
 name = "Stage 1"
