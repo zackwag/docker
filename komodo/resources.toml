@@ -1,1 +1,217 @@
+[[server]]
+name = "Local"
+[server.config]
+enabled = true
 
+##
+
+[[server]]
+name = "caddy"
+[server.config]
+enabled = true
+
+##
+
+[[stack]]
+name = "caddy"
+[stack.config]
+server = "caddy"
+auto_update = true
+auto_update_all_services = true
+files_on_host = true
+run_directory = "/etc/komodo/stacks/caddy"
+environment = """
+UPLOAD_TOKEN=[[UPLOAD_TOKEN]]  # VARIABLE = value
+"""
+
+##
+
+[[stack]]
+name = "channels-addons"
+[stack.config]
+server = "Local"
+poll_for_updates = true
+auto_update = true
+auto_update_all_services = true
+files_on_host = true
+run_directory = "/etc/komodo/stacks/channels-addons"
+environment = """
+MLB_USERNAME=[[MLB_USERNAME]]
+MLB_PASSWORD=[[MLB_PASSWORD]]
+"""
+
+##
+
+[[stack]]
+name = "channels2mqtt"
+[stack.config]
+server = "Local"
+poll_for_updates = true
+auto_update = true
+auto_update_all_services = true
+files_on_host = true
+run_directory = "/etc/komodo/stacks/channels2mqtt"
+environment = """
+HA_USERNAME=[[HA_USERNAME]]
+HA_PASSWORD=[[HA_PASSWORD]]
+"""
+
+##
+
+[[stack]]
+name = "container-backup-caddy"
+[stack.config]
+server = "caddy"
+poll_for_updates = true
+auto_update = true
+auto_update_all_services = true
+files_on_host = true
+run_directory = "/etc/komodo/stacks/container-backup-caddy"
+
+##
+
+[[stack]]
+name = "container-backup-core"
+[stack.config]
+server = "Local"
+poll_for_updates = true
+auto_update = true
+auto_update_all_services = true
+files_on_host = true
+run_directory = "/etc/komodo/stacks/container-backup-core"
+
+##
+
+[[stack]]
+name = "homepage"
+[stack.config]
+server = "Local"
+poll_for_updates = true
+auto_update = true
+auto_update_all_services = true
+files_on_host = true
+run_directory = "/etc/komodo/stacks/homepage"
+
+##
+
+[[stack]]
+name = "it-tools"
+[stack.config]
+server = "Local"
+poll_for_updates = true
+auto_update = true
+auto_update_all_services = true
+files_on_host = true
+run_directory = "/etc/komodo/stacks/it-tools"
+
+##
+
+[[stack]]
+name = "radio"
+[stack.config]
+server = "Local"
+poll_for_updates = true
+auto_update = true
+auto_update_all_services = true
+files_on_host = true
+run_directory = "/etc/komodo/stacks/radio"
+
+##
+
+[[stack]]
+name = "slash"
+[stack.config]
+server = "Local"
+poll_for_updates = true
+auto_update = true
+auto_update_all_services = true
+files_on_host = true
+run_directory = "/etc/komodo/stacks/slash"
+
+##
+
+[[stack]]
+name = "transfersh"
+[stack.config]
+server = "Local"
+poll_for_updates = true
+auto_update = true
+auto_update_all_services = true
+files_on_host = true
+run_directory = "/etc/komodo/stacks/transfersh"
+
+##
+
+[[stack]]
+name = "writefreely"
+[stack.config]
+server = "Local"
+poll_for_updates = true
+auto_update = true
+auto_update_all_services = true
+files_on_host = true
+run_directory = "/etc/komodo/stacks/writefreely"
+
+##
+
+[[procedure]]
+name = "Backup Core Database"
+description = "Triggers the Core database backup at the scheduled time."
+tags = ["system"]
+config.schedule = "Every day at 01:00"
+
+[[procedure.config.stage]]
+name = "Stage 1"
+enabled = true
+executions = [
+  { execution.type = "BackupCoreDatabase", execution.params = {}, enabled = true }
+]
+
+##
+
+[[procedure]]
+name = "Global Auto Update"
+description = "Pulls and auto updates Stacks and Deployments using 'poll_for_updates' or 'auto_update'."
+tags = ["system"]
+config.schedule = "Every day at 03:00"
+
+[[procedure.config.stage]]
+name = "Stage 1"
+enabled = true
+executions = [
+  { execution.type = "GlobalAutoUpdate", execution.params.skip_auto_update = false, enabled = true }
+]
+
+##
+
+[[procedure]]
+name = "Rotate Server Keys"
+description = "Rotates all currently connected Server keys."
+tags = ["system"]
+config.schedule = "Every day at 06:00"
+
+[[procedure.config.stage]]
+name = "Stage 1"
+enabled = true
+executions = [
+  { execution.type = "RotateAllServerKeys", execution.params = {}, enabled = true }
+]
+
+##
+
+[[builder]]
+name = "Local"
+[builder.config]
+type = "Server"
+params.server = "Local"
+
+##
+
+[[resource_sync]]
+name = "docker"
+[resource_sync.config]
+git_provider = "GitHub.com"
+repo = "zackwag/docker"
+git_account = "zackwag"
+resource_path = ["komodo/resources.toml"]
+managed = true
