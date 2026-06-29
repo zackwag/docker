@@ -21,7 +21,6 @@ auto_update_all_services = true
 git_provider = "GitHub.com"
 git_account = "zackwag"
 repo = "zackwag/docker"
-branch = "main"
 file_paths = ["stacks/caddy/compose.yaml"]
 environment = """
 UPLOAD_TOKEN=[[UPLOAD_TOKEN]]
@@ -39,8 +38,9 @@ auto_update_all_services = true
 git_provider = "GitHub.com"
 git_account = "zackwag"
 repo = "zackwag/docker"
-branch = "main"
-file_paths = ["stacks/channels-addons/compose.yaml"]
+file_paths = [
+  "stacks/channels-addons/compose.yaml"
+]
 environment = """
 MLB_USERNAME=[[MLB_USERNAME]]
 MLB_PASSWORD=[[MLB_PASSWORD]]
@@ -58,8 +58,9 @@ auto_update_all_services = true
 git_provider = "GitHub.com"
 git_account = "zackwag"
 repo = "zackwag/docker"
-branch = "main"
-file_paths = ["stacks/channels2mqtt/compose.yaml"]
+file_paths = [
+  "stacks/channels2mqtt/compose.yaml"
+]
 environment = """
 HA_USERNAME=[[HA_USERNAME]]
 HA_PASSWORD=[[HA_PASSWORD]]
@@ -77,8 +78,9 @@ auto_update_all_services = true
 git_provider = "GitHub.com"
 git_account = "zackwag"
 repo = "zackwag/docker"
-branch = "main"
-file_paths = ["stacks/container-backup-caddy/compose.yaml"]
+file_paths = [
+  "stacks/container-backup-caddy/compose.yaml"
+]
 
 ##
 
@@ -92,8 +94,9 @@ auto_update_all_services = true
 git_provider = "GitHub.com"
 git_account = "zackwag"
 repo = "zackwag/docker"
-branch = "main"
-file_paths = ["stacks/container-backup-core/compose.yaml"]
+file_paths = [
+  "stacks/container-backup-core/compose.yaml"
+]
 
 ##
 
@@ -107,7 +110,6 @@ auto_update_all_services = true
 git_provider = "GitHub.com"
 git_account = "zackwag"
 repo = "zackwag/docker"
-branch = "main"
 file_paths = ["stacks/homepage/compose.yaml"]
 
 ##
@@ -122,7 +124,6 @@ auto_update_all_services = true
 git_provider = "GitHub.com"
 git_account = "zackwag"
 repo = "zackwag/docker"
-branch = "main"
 file_paths = ["stacks/it-tools/compose.yaml"]
 
 ##
@@ -137,7 +138,6 @@ auto_update_all_services = true
 git_provider = "GitHub.com"
 git_account = "zackwag"
 repo = "zackwag/docker"
-branch = "main"
 file_paths = ["stacks/radio/compose.yaml"]
 
 ##
@@ -152,7 +152,6 @@ auto_update_all_services = true
 git_provider = "GitHub.com"
 git_account = "zackwag"
 repo = "zackwag/docker"
-branch = "main"
 file_paths = ["stacks/slash/compose.yaml"]
 
 ##
@@ -167,8 +166,9 @@ auto_update_all_services = true
 git_provider = "GitHub.com"
 git_account = "zackwag"
 repo = "zackwag/docker"
-branch = "main"
-file_paths = ["stacks/transfersh/compose.yaml"]
+file_paths = [
+  "stacks/transfersh/compose.yaml"
+]
 
 ##
 
@@ -182,8 +182,9 @@ auto_update_all_services = true
 git_provider = "GitHub.com"
 git_account = "zackwag"
 repo = "zackwag/docker"
-branch = "main"
-file_paths = ["stacks/writefreely/compose.yaml"]
+file_paths = [
+  "stacks/writefreely/compose.yaml"
+]
 
 ##
 
@@ -248,13 +249,3 @@ repo = "zackwag/docker"
 git_account = "zackwag"
 resource_path = ["komodo/resources.toml"]
 managed = true
-
-[[alerter]]
-name = "Home Assistant"
-[alerter.config]
-enabled = true
-[alerter.config.endpoint]
-type = "Custom"
-params.url = "http://192.168.4.90:8123/api/webhook/-jzw7PvzlmF6pCfUToOqFsu8d"
-[alerter.config.filter]
-alert_types = ["ServerUnreachable", "ServerCpu", "ServerMem", "ServerDisk", "ContainerStateChange", "StackStateChange", "BuildFailed"]
