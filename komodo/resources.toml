@@ -233,6 +233,15 @@ executions = [
 
 ##
 
+[[alerter]]
+name = "Home Assistant"
+[alerter.config]
+enabled = true
+endpoint.type = "Custom"
+endpoint.params.url = "http://192.168.4.90:8123/api/webhook/-jzw7PvzlmF6pCfUToOqFsu8d"
+
+##
+
 [[builder]]
 name = "Local"
 [builder.config]
