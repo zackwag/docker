@@ -1,5 +1,5 @@
 [[server]]
-name = "Local"
+name = "app-stacks"
 [server.config]
 enabled = true
 
@@ -31,7 +31,7 @@ UPLOAD_TOKEN=[[UPLOAD_TOKEN]]
 [[stack]]
 name = "channels-addons"
 [stack.config]
-server = "Local"
+server = "app-stacks"
 poll_for_updates = true
 auto_update = true
 auto_update_all_services = true
@@ -51,7 +51,7 @@ MLB_PASSWORD=[[MLB_PASSWORD]]
 [[stack]]
 name = "channels2mqtt"
 [stack.config]
-server = "Local"
+server = "app-stacks"
 poll_for_updates = true
 auto_update = true
 auto_update_all_services = true
@@ -87,7 +87,7 @@ file_paths = [
 [[stack]]
 name = "container-backup-core"
 [stack.config]
-server = "Local"
+server = "app-stacks"
 poll_for_updates = true
 auto_update = true
 auto_update_all_services = true
@@ -103,7 +103,7 @@ file_paths = [
 [[stack]]
 name = "homepage"
 [stack.config]
-server = "Local"
+server = "app-stacks"
 poll_for_updates = true
 auto_update = true
 auto_update_all_services = true
@@ -117,7 +117,7 @@ file_paths = ["stacks/homepage/compose.yaml"]
 [[stack]]
 name = "it-tools"
 [stack.config]
-server = "Local"
+server = "app-stacks"
 poll_for_updates = true
 auto_update = true
 auto_update_all_services = true
@@ -131,7 +131,7 @@ file_paths = ["stacks/it-tools/compose.yaml"]
 [[stack]]
 name = "radio"
 [stack.config]
-server = "Local"
+server = "app-stacks"
 poll_for_updates = true
 auto_update = true
 auto_update_all_services = true
@@ -145,7 +145,7 @@ file_paths = ["stacks/radio/compose.yaml"]
 [[stack]]
 name = "slash"
 [stack.config]
-server = "Local"
+server = "app-stacks"
 poll_for_updates = true
 auto_update = true
 auto_update_all_services = true
@@ -159,7 +159,7 @@ file_paths = ["stacks/slash/compose.yaml"]
 [[stack]]
 name = "transfersh"
 [stack.config]
-server = "Local"
+server = "app-stacks"
 poll_for_updates = true
 auto_update = true
 auto_update_all_services = true
@@ -175,7 +175,7 @@ file_paths = [
 [[stack]]
 name = "writefreely"
 [stack.config]
-server = "Local"
+server = "app-stacks"
 poll_for_updates = true
 auto_update = true
 auto_update_all_services = true
@@ -258,7 +258,7 @@ alert_types = [
 name = "Local"
 [builder.config]
 type = "Server"
-params.server = "Local"
+params.server = "app-stacks"
 
 ##
 
