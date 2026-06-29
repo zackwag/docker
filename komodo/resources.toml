@@ -248,3 +248,13 @@ repo = "zackwag/docker"
 git_account = "zackwag"
 resource_path = ["komodo/resources.toml"]
 managed = true
+
+[[alerter]]
+name = "Home Assistant"
+[alerter.config]
+enabled = true
+[alerter.config.endpoint]
+type = "Custom"
+params.url = "http://192.168.4.90:8123/api/webhook/-jzw7PvzlmF6pCfUToOqFsu8d"
+[alerter.config.filter]
+alert_types = ["ServerUnreachable", "ServerCpu", "ServerMem", "ServerDisk", "ContainerStateChange", "StackStateChange", "BuildFailed"]
