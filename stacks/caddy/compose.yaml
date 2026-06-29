@@ -5,6 +5,9 @@ services:
     restart: unless-stopped
     security_opt:
       - label:disable
+    sysctls:
+      net.core.rmem_max: 7500000
+      net.core.wmem_max: 7500000
     ports:
       - 80:80
       - 443:443
