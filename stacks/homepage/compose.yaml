@@ -11,4 +11,4 @@ services:
     environment:
       PUID: 1000
       PGID: 1000
-      HOMEPAGE_ALLOWED_HOSTS: 192.168.4.70:4000,komodo.local:4000,dashboard.internal
+      HOMEPAGE_ALLOWED_HOSTS: 192.168.4.70:4000,dashboard.internal,dashboard.internal:443,dashboard.internal:80
