@@ -32,7 +32,7 @@ services:
     networks:
       - caddy-ui
   caddy-ui-backend:
-    image: zackwag/caddy-ui-backend:test
+    image: zackwag/caddy-ui-backend:latest
     container_name: caddy-ui-backend
     restart: unless-stopped
     security_opt:
