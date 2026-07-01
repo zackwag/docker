@@ -51,7 +51,7 @@ services:
     depends_on:
       - caddy
   caddy-ui-frontend:
-    image: zackwag/caddy-ui-frontend:latest
+    image: zackwag/caddy-ui-frontend:test
     container_name: caddy-ui-frontend
     restart: unless-stopped
     security_opt:
