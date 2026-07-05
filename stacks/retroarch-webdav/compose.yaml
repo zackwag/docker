@@ -1,16 +1,14 @@
-## Add your compose file here
 services:
-  hello_world:
-    image: hello-world
-    # networks:
-    #   - default
-    # ports:
-    #   - 3000:3000
-    # volumes:
-    #   - data:/data
-
-# networks:
-#   default: {}
-
-# volumes:
-#   data:
+  retroarch-webdav:
+    image: rclone/rclone
+    container_name: retroarch-webdav
+    restart: unless-stopped
+    ports:
+      - "8765:8765"
+    volumes:
+      - /docker/samba/data/retroarch:/data
+    command: >
+      serve webdav /data
+      --addr :8765
+      --user ${WEBDAV_RETROARCH_USER}
+      --pass ${WEBDAV_RETROARCH_PASSWORD}
