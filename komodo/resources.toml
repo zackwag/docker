@@ -143,6 +143,23 @@ file_paths = ["stacks/radio/compose.yaml"]
 ##
 
 [[stack]]
+name = "retroarch-webdav"
+[stack.config]
+server = "app-stacks"
+poll_for_updates = true
+auto_update = true
+auto_update_all_services = true
+linked_repo = "docker"
+run_directory = "stacks/retroarch-webdav"
+file_paths = ["compose.yaml"]
+environment = """
+WEBDAV_RETROARCH_USER=[[WEBDAV_RETROARCH_USER]]  # VARIABLE = value
+WEBDAV_RETROARCH_PASSWORD=[[WEBDAV_RETROARCH_PASSWORD]]
+"""
+
+##
+
+[[stack]]
 name = "samba"
 [stack.config]
 server = "app-stacks"
@@ -202,6 +219,15 @@ repo = "zackwag/docker"
 file_paths = [
   "stacks/writefreely/compose.yaml"
 ]
+
+##
+
+[[repo]]
+name = "docker"
+[repo.config]
+git_provider = "GitHub.com"
+git_account = "zackwag"
+repo = "zackwag/docker"
 
 ##
 
