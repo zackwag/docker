@@ -11,8 +11,7 @@ services:
       - ICECAST_PASSWORD=listenerpass
       - ICECAST_HOSTNAME=localhost
       - ICECAST_PORT=8000
-    volumes:
-      - /docker/icecast/config/icecast.xml:/etc/icecast.xml
+
   darkice:
     image: jwater7/darkice:latest
     container_name: darkice
