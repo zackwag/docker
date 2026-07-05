@@ -151,6 +151,8 @@ git_account = "zackwag"
 repo = "zackwag/docker"
 file_paths = ["stacks/samba/compose.yaml"]
 environment = """
+SAMBA_ADMIN_USER=[[SAMBA_ADMIN_USER]]
+SAMBA_ADMIN_PASSWORD=[[SAMBA_ADMIN_PASSWORD]]
 SAMBA_RETROARCH_USER=[[SAMBA_RETROARCH_USER]]
 SAMBA_RETROARCH_PASSWORD=[[SAMBA_RETROARCH_PASSWORD]]
 """
