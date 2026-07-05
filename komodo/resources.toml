@@ -18,10 +18,9 @@ name = "caddy"
 server = "caddy"
 auto_update = true
 auto_update_all_services = true
-git_provider = "GitHub.com"
-git_account = "zackwag"
-repo = "zackwag/docker"
-file_paths = ["stacks/caddy/compose.yaml"]
+linked_repo = "docker"
+run_directory = "stacks/caddy"
+file_paths = ["compose.yaml"]
 environment = """
 UPLOAD_TOKEN=[[UPLOAD_TOKEN]]
 """
@@ -35,12 +34,9 @@ server = "app-stacks"
 poll_for_updates = true
 auto_update = true
 auto_update_all_services = true
-git_provider = "GitHub.com"
-git_account = "zackwag"
-repo = "zackwag/docker"
-file_paths = [
-  "stacks/channels-addons/compose.yaml"
-]
+linked_repo = "docker"
+run_directory = "stacks/channels-addons"
+file_paths = ["compose.yaml"]
 environment = """
 MLB_USERNAME=[[MLB_USERNAME]]
 MLB_PASSWORD=[[MLB_PASSWORD]]
@@ -55,12 +51,9 @@ server = "app-stacks"
 poll_for_updates = true
 auto_update = true
 auto_update_all_services = true
-git_provider = "GitHub.com"
-git_account = "zackwag"
-repo = "zackwag/docker"
-file_paths = [
-  "stacks/channels2mqtt/compose.yaml"
-]
+linked_repo = "docker"
+run_directory = "stacks/channels2mqtt"
+file_paths = ["compose.yaml"]
 environment = """
 HA_USERNAME=[[HA_USERNAME]]
 HA_PASSWORD=[[HA_PASSWORD]]
@@ -75,12 +68,9 @@ server = "caddy"
 poll_for_updates = true
 auto_update = true
 auto_update_all_services = true
-git_provider = "GitHub.com"
-git_account = "zackwag"
-repo = "zackwag/docker"
-file_paths = [
-  "stacks/container-backup-caddy/compose.yaml"
-]
+linked_repo = "docker"
+run_directory = "stacks/container-backup-caddy"
+file_paths = ["compose.yaml"]
 
 ##
 
@@ -91,12 +81,9 @@ server = "app-stacks"
 poll_for_updates = true
 auto_update = true
 auto_update_all_services = true
-git_provider = "GitHub.com"
-git_account = "zackwag"
-repo = "zackwag/docker"
-file_paths = [
-  "stacks/container-backup-core/compose.yaml"
-]
+linked_repo = "docker"
+run_directory = "stacks/container-backup-core"
+file_paths = ["compose.yaml"]
 
 ##
 
@@ -121,10 +108,9 @@ server = "app-stacks"
 poll_for_updates = true
 auto_update = true
 auto_update_all_services = true
-git_provider = "GitHub.com"
-git_account = "zackwag"
-repo = "zackwag/docker"
-file_paths = ["stacks/it-tools/compose.yaml"]
+linked_repo = "docker"
+run_directory = "stacks/it-tools"
+file_paths = ["compose.yaml"]
 
 ##
 
@@ -135,10 +121,9 @@ server = "app-stacks"
 poll_for_updates = true
 auto_update = true
 auto_update_all_services = true
-git_provider = "GitHub.com"
-git_account = "zackwag"
-repo = "zackwag/docker"
-file_paths = ["stacks/radio/compose.yaml"]
+linked_repo = "docker"
+run_directory = "stacks/radio"
+file_paths = ["compose.yaml"]
 
 ##
 
@@ -183,10 +168,9 @@ server = "app-stacks"
 poll_for_updates = true
 auto_update = true
 auto_update_all_services = true
-git_provider = "GitHub.com"
-git_account = "zackwag"
-repo = "zackwag/docker"
-file_paths = ["stacks/slash/compose.yaml"]
+linked_repo = "docker"
+run_directory = "stacks/slash"
+file_paths = ["compose.yaml"]
 
 ##
 
@@ -197,12 +181,9 @@ server = "app-stacks"
 poll_for_updates = true
 auto_update = true
 auto_update_all_services = true
-git_provider = "GitHub.com"
-git_account = "zackwag"
-repo = "zackwag/docker"
-file_paths = [
-  "stacks/transfersh/compose.yaml"
-]
+linked_repo = "docker"
+run_directory = "stacks/transfersh"
+file_paths = ["compose.yaml"]
 
 ##
 
@@ -213,19 +194,15 @@ server = "app-stacks"
 poll_for_updates = true
 auto_update = true
 auto_update_all_services = true
-git_provider = "GitHub.com"
-git_account = "zackwag"
-repo = "zackwag/docker"
-file_paths = [
-  "stacks/writefreely/compose.yaml"
-]
+linked_repo = "docker"
+run_directory = "stacks/writefreely"
+file_paths = ["compose.yaml"]
 
 ##
 
 [[repo]]
 name = "docker"
 [repo.config]
-git_provider = "GitHub.com"
 git_account = "zackwag"
 repo = "zackwag/docker"
 
