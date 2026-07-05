@@ -143,6 +143,17 @@ file_paths = ["stacks/radio/compose.yaml"]
 ##
 
 [[stack]]
+name = "samba"
+[stack.config]
+server = "app-stacks"
+git_provider = "GitHub.com"
+git_account = "zackwag"
+repo = "zackwag/docker"
+file_paths = ["stacks/samba/compose.yaml"]
+
+##
+
+[[stack]]
 name = "slash"
 [stack.config]
 server = "app-stacks"
