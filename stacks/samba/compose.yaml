@@ -11,8 +11,8 @@ services:
       SAMBA_CONF_LOG_LEVEL: 1
       MODEL: MacSamba
       SAMBA_GLOBAL_STANZA: "vfs objects = catia fruit streams_xattr; fruit:nfs_aces = no; fruit:zero_file_id = yes; fruit:metadata = stream; fruit:veto_appledouble = no; fruit:wipe_intentionally_left_blank_rfork = yes; fruit:delete_empty_adfiles = yes"
-      ACCOUNT_${SAMBA_ADMIN_USER}: ${SAMBA_ADMIN_PASSWORD}
-      UID_${SAMBA_ADMIN_USER}: 1000
-      SAMBA_VOLUME_CONFIG_data: "[data]; path=/shares; valid users = ${SAMBA_ADMIN_USER}; guest ok = no; read only = no; browseable = yes"
+      ACCOUNT_admin: ${SAMBA_ADMIN_PASSWORD}
+      UID_admin: 1000
+      SAMBA_VOLUME_CONFIG_data: "[data]; path=/shares; valid users = admin; guest ok = no; read only = no; browseable = yes"
     volumes:
       - /docker/samba/data:/shares
