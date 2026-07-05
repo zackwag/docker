@@ -1,16 +1,18 @@
 services:
   samba:
-    image: dperson/samba
+    image: ghcr.io/servercontainers/samba:smbd-only-latest
     container_name: samba
     restart: unless-stopped
     ports:
       - "139:139"
       - "445:445"
     environment:
-      - USER=${SAMBA_RETROARCH_USER};${SAMBA_RETROARCH_PASSWORD}
-      - USER2=${SAMBA_ADMIN_USER};${SAMBA_ADMIN_PASSWORD}
-      - SHARE=retroarch;/share/retroarch;yes;no;no;${SAMBA_RETROARCH_USER}
-      - SHARE2=data;/share;yes;no;no;${SAMBA_ADMIN_USER}
-      - WORKGROUP=WORKGROUP
+      TZ: America/New_York
+      SAMBA_CONF_LOG_LEVEL: 1
+      MODEL: MacSamba
+      SAMBA_GLOBAL_STANZA: "vfs objects = catia fruit streams_xattr; fruit:nfs_aces = no; fruit:zero_file_id = yes; fruit:metadata = stream; fruit:veto_appledouble = no; fruit:wipe_intentionally_left_blank_rfork = yes; fruit:delete_empty_adfiles = yes"
+      ACCOUNT_${SAMBA_ADMIN_USER}: ${SAMBA_ADMIN_PASSWORD}
+      UID_${SAMBA_ADMIN_USER}: 1000
+      SAMBA_VOLUME_CONFIG_data: "[data]; path=/shares; valid users = ${SAMBA_ADMIN_USER}; guest ok = no; read only = no; browseable = yes"
     volumes:
-      - /docker/samba/data:/share
+      - /docker/samba/data:/shares
