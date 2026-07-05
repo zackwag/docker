@@ -1,0 +1,14 @@
+services:
+  retroarch-samba:
+    image: dperson/samba
+    container_name: retroarch-samba
+    restart: unless-stopped
+    ports:
+      - "139:139"
+      - "445:445"
+    environment:
+      - USER=retroarch;${SAMBA_PASSWORD}
+      - SHARE=retroarch;/share;yes;no;no;retroarch
+      - WORKGROUP=WORKGROUP
+    volumes:
+      - /docker/samba/data:/share
