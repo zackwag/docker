@@ -321,8 +321,6 @@ params.server = "app-stacks"
 [[resource_sync]]
 name = "docker"
 [resource_sync.config]
-git_provider = "GitHub.com"
-repo = "zackwag/docker"
-git_account = "zackwag"
+linked_repo = "docker"
 resource_path = ["komodo/resources.toml"]
 managed = true
