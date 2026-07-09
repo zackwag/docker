@@ -30,6 +30,8 @@ services:
     volumes:
       - /docker/iptv-catalog/data:/app/data
       - /docker/iptv-catalog/epg:/app/epg-shared
+    environment:
+      - TZ=America/New_York
   iptv-catalog-epg:
     image: ghcr.io/iptv-org/epg:master
     container_name: iptv-catalog-epg
