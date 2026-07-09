@@ -20,3 +20,9 @@ services:
       - 3135:5523
     volumes:
       - /docker/fast_channels/data:/data
+  vlc-bridge-pbs:
+    image: ghcr.io/miibeez/vlc-bridge-pbs:latest
+    container_name: vlc-bridge-pbs
+    restart: unless-stopped
+    ports:
+      - 3136:7777
