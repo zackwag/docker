@@ -20,3 +20,24 @@ services:
       - 3135:5523
     volumes:
       - /docker/fast_channels/data:/data
+  iptv-catalog:
+    image: iptv-catalog:local
+    container_name: iptv-catalog
+    restart: unless-stopped
+    ports:
+      - 3136:3000
+    volumes:
+      - /docker/iptv-catalog/data:/app/data
+      - /docker/iptv-catalog/epg:/app/epg-shared
+  iptv-catalog-epg:
+    image: ghcr.io/iptv-org/epg:master
+    container_name: iptv-catalog-epg
+    restart: unless-stopped
+    environment:
+      CRON_SCHEDULE: "0 */6 * * *"
+      DAYS: "3"
+      MAX_CONNECTIONS: "5"
+    volumes:
+      - /docker/iptv-catalog/epg:/epg/public
+    depends_on:
+      - iptv-catalog
