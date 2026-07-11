@@ -21,7 +21,7 @@ services:
     volumes:
       - /docker/fast_channels/data:/data
   iptv-catalog:
-    image: iptv-catalog:latest
+    image: zackwag/iptv-catalog:latest
     container_name: iptv-catalog
     restart: unless-stopped
     ports:
