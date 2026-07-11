@@ -21,8 +21,7 @@ services:
     volumes:
       - /docker/fast_channels/data:/data
   iptv-catalog:
-    image: iptv-catalog:local
-    pull_policy: never
+    image: iptv-catalog:latest
     container_name: iptv-catalog
     restart: unless-stopped
     ports:
