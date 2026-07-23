@@ -1,0 +1,11 @@
+services:
+  ecobee-alerts-2-mqtt:
+    image: zackwag/ecobeealerts2mqtt
+    restart: unless-stopped
+    environment:
+      - ECOBEE_API_KEY=${ECOBEE_API_KEY}
+      - MQTT_HOST=192.168.4.90
+      - MQTT_USERNAME=${HA_USERNAME}
+      - MQTT_PASSWORD=${HA_PASSWORD}
+    volumes:
+      - /docker/ecobeealerts2mqtt/data:/data
