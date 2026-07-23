@@ -99,6 +99,7 @@ file_paths = ["compose.yaml"]
 environment = """
 HA_USERNAME=[[HA_USERNAME]]
 HA_PASSWORD=[[HA_PASSWORD]]
+ECOBEE_API_KEY=[[ECOBEE_API_KEY]]
 """
 
 ##
