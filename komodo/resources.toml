@@ -88,6 +88,22 @@ file_paths = ["compose.yaml"]
 ##
 
 [[stack]]
+name = "ecobeealerts2mqtt"
+[stack.config]
+server = "app-stacks"
+auto_update = true
+auto_update_all_services = true
+linked_repo = "docker"
+run_directory = "stacks/ecobeealerts2mqtt"
+file_paths = ["compose.yaml"]
+environment = """
+HA_USERNAME=[[HA_USERNAME]]
+HA_PASSWORD=[[HA_PASSWORD]]
+"""
+
+##
+
+[[stack]]
 name = "homepage"
 [stack.config]
 server = "app-stacks"
