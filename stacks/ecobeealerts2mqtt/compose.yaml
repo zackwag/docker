@@ -1,7 +1,7 @@
 services:
   ecobee-alerts-2-mqtt:
     image: zackwag/ecobeealerts2mqtt:latest
-    container_name: caddy
+    container_name: ecobeealerts2mqtt
     restart: unless-stopped
     environment:
       - ECOBEE_API_KEY=${ECOBEE_API_KEY}
