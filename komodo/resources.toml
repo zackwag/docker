@@ -303,6 +303,15 @@ alert_types = [
 
 ##
 
+[[alerter]]
+name = "Ntfy"
+[alerter.config]
+enabled = true
+endpoint.type = "Ntfy"
+endpoint.params.url = "https://ntfy.sh/zackwag-homelab-4f8x2q"
+
+##
+
 [[builder]]
 name = "Local"
 [builder.config]
