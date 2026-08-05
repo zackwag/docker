@@ -24,7 +24,7 @@ services:
       - UPSTREAM_PROMETHEUS=192.168.4.75
       - UPSTREAM_PVE=192.168.4.67
       - UPLOAD_TOKEN=${UPLOAD_TOKEN}
-      - URI_HOME_ASSISTANT_CLOUD=https://0oe2it8s8zprxdyk18wlgkop1nck791h.ui.nabu.casa/
+      - URI_HOME_ASSISTANT_CLOUD=https://0oe2it8s8zprxdyk18wlgkop1nck791h.ui.nabu.casa
     volumes:
       - /docker/caddy/Caddyfile:/etc/caddy/Caddyfile
       - /docker/caddy/data:/data
