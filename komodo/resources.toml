@@ -309,16 +309,6 @@ name = "Ntfy"
 enabled = true
 endpoint.type = "Ntfy"
 endpoint.params.url = "https://ntfy.sh/zackwag-homelab-4f8x2q"
-alert_types = [
-  "ServerUnreachable",
-  "ServerCpu",
-  "ServerMem",
-  "ServerDisk",
-  "BuildFailed",
-  "RepoBuildFailed",
-  "ActionFailed",
-  "ProcedureFailed"
-]
 
 ##
 
