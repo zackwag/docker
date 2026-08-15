@@ -111,10 +111,9 @@ server = "app-stacks"
 poll_for_updates = true
 auto_update = true
 auto_update_all_services = true
-git_provider = "GitHub.com"
-git_account = "zackwag"
-repo = "zackwag/docker"
-file_paths = ["stacks/homepage/compose.yaml"]
+linked_repo = "docker"
+run_directory = "stacks/homepage"
+file_paths = ["compose.yaml"]
 
 ##
 
