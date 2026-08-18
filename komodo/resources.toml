@@ -232,7 +232,7 @@ config.schedule = "Every day at midnight"
 name = "Stage 1"
 enabled = true
 executions = [
-    { execution.type = "RunSync", execution.params.sync = "docker", enabled = true },
+  { execution.type = "RunSync", execution.params.sync = "docker", enabled = true }
 ]
 
 ##
@@ -247,7 +247,7 @@ config.schedule = "Every day at 01:00"
 name = "Stage 1"
 enabled = true
 executions = [
-    { execution.type = "BackupCoreDatabase", execution.params = {}, enabled = true },
+  { execution.type = "BackupCoreDatabase", execution.params = {}, enabled = true }
 ]
 
 ##
@@ -262,7 +262,7 @@ config.schedule = "Every day at 05:00"
 name = "Stage 1"
 enabled = true
 executions = [
-    { execution.type = "GlobalAutoUpdate", execution.params.skip_auto_update = false, enabled = true },
+  { execution.type = "GlobalAutoUpdate", execution.params.skip_auto_update = false, enabled = true }
 ]
 
 ##
@@ -277,7 +277,7 @@ config.schedule = "Every day at 06:00"
 name = "Stage 1"
 enabled = true
 executions = [
-    { execution.type = "RotateAllServerKeys", execution.params = {}, enabled = true },
+  { execution.type = "RotateAllServerKeys", execution.params = {}, enabled = true }
 ]
 
 ##
@@ -285,17 +285,18 @@ executions = [
 [[alerter]]
 name = "Home Assistant"
 [alerter.config]
+enabled = true
 endpoint.type = "Custom"
 endpoint.params.url = "http://192.168.4.90:8123/api/webhook/-jzw7PvzlmF6pCfUToOqFsu8d"
 alert_types = [
-    "ServerUnreachable",
-    "ServerCpu",
-    "ServerMem",
-    "ServerDisk",
-    "BuildFailed",
-    "RepoBuildFailed",
-    "ActionFailed",
-    "ProcedureFailed",
+  "ServerUnreachable",
+  "ServerCpu",
+  "ServerMem",
+  "ServerDisk",
+  "BuildFailed",
+  "RepoBuildFailed",
+  "ActionFailed",
+  "ProcedureFailed"
 ]
 
 ##
@@ -303,18 +304,17 @@ alert_types = [
 [[alerter]]
 name = "Ntfy"
 [alerter.config]
-enabled = true
 endpoint.type = "Ntfy"
 endpoint.params.url = "https://ntfy.sh/zackwag-homelab-4f8x2q"
 alert_types = [
-    "ServerUnreachable",
-    "ServerCpu",
-    "ServerMem",
-    "ServerDisk",
-    "BuildFailed",
-    "RepoBuildFailed",
-    "ActionFailed",
-    "ProcedureFailed",
+  "ServerUnreachable",
+  "ServerCpu",
+  "ServerMem",
+  "ServerDisk",
+  "BuildFailed",
+  "RepoBuildFailed",
+  "ActionFailed",
+  "ProcedureFailed"
 ]
 
 ##
