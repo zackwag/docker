@@ -1,16 +1,12 @@
-## Add your compose file here
 services:
-  hello_world:
-    image: hello-world
-    # networks:
-    #   - default
-    # ports:
-    #   - 3000:3000
-    # volumes:
-    #   - data:/data
-
-# networks:
-#   default: {}
-
-# volumes:
-#   data:
+  nut2mqtt:
+    image: zackwag/nut2mqtt:latest
+    container_name: nut2mqtt
+    restart: unless-stopped
+    init: true
+    devices:
+      - /dev/bus/usb:/dev/bus/usb
+    volumes:
+      - /docker/nut2mqtt/nut:/etc/nut:ro
+      - /docker/nut2mqtt/config/config.yaml:/data/config.yaml:ro
+      - /docker/nut2mqtt/data:/data
