@@ -131,6 +131,19 @@ file_paths = ["compose.yaml"]
 ##
 
 [[stack]]
+name = "nut2mqtt"
+[stack.config]
+server = "app-stacks"
+poll_for_updates = true
+auto_update = true
+auto_update_all_services = true
+linked_repo = "docker"
+run_directory = "stacks/nut2mqtt"
+file_paths = ["compose.yaml"]
+
+##
+
+[[stack]]
 name = "radio"
 [stack.config]
 server = "app-stacks"
@@ -164,10 +177,9 @@ WEBDAV_RETROARCH_PASSWORD=[[WEBDAV_RETROARCH_PASSWORD]]
 name = "samba"
 [stack.config]
 server = "app-stacks"
-git_provider = "GitHub.com"
-git_account = "zackwag"
-repo = "zackwag/docker"
-file_paths = ["stacks/samba/compose.yaml"]
+linked_repo = "docker"
+run_directory = "stacks/samba"
+file_paths = ["compose.yaml"]
 environment = """
 SAMBA_ADMIN_USER=[[SAMBA_ADMIN_USER]]
 SAMBA_ADMIN_PASSWORD=[[SAMBA_ADMIN_PASSWORD]]
