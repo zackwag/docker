@@ -4,6 +4,7 @@ services:
     container_name: nut2mqtt
     restart: unless-stopped
     init: true
+    privileged: true
     devices:
       - /dev/bus/usb:/dev/bus/usb
     volumes:
@@ -11,5 +12,3 @@ services:
       - /docker/nut2mqtt/config/config.yaml:/data/config.yaml:ro
       - /docker/nut2mqtt/data:/data
       - /dev/bus/usb:/dev/bus/usb
-    device_cgroup_rules:
-      - 'c 189:* rmw'
