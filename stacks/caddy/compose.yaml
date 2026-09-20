@@ -42,7 +42,6 @@ services:
       - 9876:3001
     environment:
       - TZ=America/New_York
-      - CADDYFILE_TITLES=true 
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - /docker/caddy/Caddyfile:/etc/caddy/Caddyfile
