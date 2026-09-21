@@ -20,6 +20,12 @@ services:
       - 3135:5523
     volumes:
       - /docker/fast_channels/data:/data
+  vlc-bridge-pbs:
+      image: registry.gitlab.com/miibeez/vlc-bridge-pbs:latest
+      container_name: vlc-bridge-pbs
+      restart: unless-stopped
+      ports:
+          - 7777:7777
   iptv-catalog:
     image: zackwag/iptv-catalog:latest
     container_name: iptv-catalog
