@@ -44,10 +44,7 @@ services:
       - TZ=America/New_York
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - /docker/caddy/Caddyfile:/etc/caddy/Caddyfile
-      - /docker/caddy/logs:/var/log/caddy
       - /docker/caddy-ui:/etc/caddy-ui
-      - /docker/caddy/data:/data/caddy
     networks:
       - caddy-ui
     depends_on:
