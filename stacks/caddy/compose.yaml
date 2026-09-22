@@ -32,16 +32,6 @@ services:
       - /docker/caddy/logs:/var/log/caddy
     networks:
       - caddy-ui
-  caddy-staging:
-    image: caddy:latest
-    container_name: caddy-staging
-    restart: unless-stopped
-    volumes:
-      - /docker/caddy-staging/Caddyfile:/etc/caddy/Caddyfile
-      - /docker/caddy-staging/data:/data
-      - /docker/caddy-staging/config:/config
-    networks:
-      - caddy-ui
   caddy-ui-backend:
     image: zackwag/caddy-ui-backend:beta
     container_name: caddy-ui-backend
