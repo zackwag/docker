@@ -33,7 +33,7 @@ services:
     networks:
       - caddy-ui
   caddy-ui-backend:
-    image: zackwag/caddy-ui-backend:latest
+    image: zackwag/caddy-ui-backend:beta
     container_name: caddy-ui-backend
     restart: unless-stopped
     security_opt:
@@ -53,7 +53,7 @@ services:
     depends_on:
       - caddy
   caddy-ui-frontend:
-    image: zackwag/caddy-ui-frontend:latest
+    image: zackwag/caddy-ui-frontend:beta
     container_name: caddy-ui-frontend
     restart: unless-stopped
     security_opt:
