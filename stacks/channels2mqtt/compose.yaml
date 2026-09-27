@@ -6,5 +6,5 @@ services:
     environment:
       - CHANNELS_HOST=192.168.4.25
       - MQTT_HOST=192.168.4.90
-      - MQTT_USER=${HA_USERNAME}
-      - MQTT_PASS=${HA_PASSWORD}
+      - MQTT_USER=channels2mqtt
+      - MQTT_PASS=${CHANNELS2MQTT_PASSWORD}

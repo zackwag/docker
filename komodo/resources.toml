@@ -55,8 +55,7 @@ linked_repo = "docker"
 run_directory = "stacks/channels2mqtt"
 file_paths = ["compose.yaml"]
 environment = """
-HA_USERNAME=[[HA_USERNAME]]
-HA_PASSWORD=[[HA_PASSWORD]]
+CHANNELS2MQTT_PASSWORD=[[CHANNELS2MQTT_PASSWORD]]
 """
 
 ##
