@@ -18,10 +18,14 @@ Homelab Docker stacks managed by [Komodo](https://komo.do), running on Proxmox L
 | channels2mqtt | App stacks LXC | Channels DVR to Home Assistant via MQTT |
 | container-backup-caddy | Caddy LXC | Backup spoke for Caddy LXC |
 | container-backup-core | App stacks LXC | Backup hub for app stacks LXC |
+| ecobeealerts2mqtt | App stacks LXC | Ecobee alerts to Home Assistant via MQTT |
 | homepage | App stacks LXC | Homepage dashboard |
 | it-tools | App stacks LXC | IT Tools developer utilities |
 | mqtt-explorer | App stacks LXC | MQTT Explorer broker browser |
+| nut2mqtt | App stacks LXC | NUT UPS status to Home Assistant via MQTT |
 | radio | App stacks LXC | Icecast + Darkice internet radio |
+| retroarch-webdav | App stacks LXC | WebDAV access to RetroArch saves/states |
+| samba | App stacks LXC | Samba file share |
 | slash | App stacks LXC | Link shortener |
 | transfersh | App stacks LXC | File transfer service |
 | writefreely | App stacks LXC | Blog platform |
