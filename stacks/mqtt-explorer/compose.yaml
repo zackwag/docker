@@ -1,11 +1,9 @@
 services:
   mqtt-explorer:
-    image: ghcr.io/thomasnordquist/mqtt-explorer:latest
+    image: smeagolworms4/mqtt-explorer:latest
     container_name: mqtt-explorer
     restart: unless-stopped
     ports:
-      - "4321:3000"
-    environment:
-      - MQTT_EXPLORER_SKIP_AUTH=true
+      - "4321:4000"
     volumes:
-      - /docker/mqtt-explorer/data:/app/data
+      - /docker/mqtt-explorer/data:/data
