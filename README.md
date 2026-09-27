@@ -20,6 +20,7 @@ Homelab Docker stacks managed by [Komodo](https://komo.do), running on Proxmox L
 | container-backup-core | App stacks LXC | Backup hub for app stacks LXC |
 | homepage | App stacks LXC | Homepage dashboard |
 | it-tools | App stacks LXC | IT Tools developer utilities |
+| mqtt-explorer | App stacks LXC | MQTT Explorer broker browser |
 | radio | App stacks LXC | Icecast + Darkice internet radio |
 | slash | App stacks LXC | Link shortener |
 | transfersh | App stacks LXC | File transfer service |
