@@ -96,8 +96,7 @@ linked_repo = "docker"
 run_directory = "stacks/ecobeealerts2mqtt"
 file_paths = ["compose.yaml"]
 environment = """
-HA_USERNAME=[[HA_USERNAME]]
-HA_PASSWORD=[[HA_PASSWORD]]
+ECOBEEALERTS2MQTT_PASSWORD=[[ECOBEEALERTS2MQTT_PASSWORD]]
 ECOBEE_API_KEY=[[ECOBEE_API_KEY]]
 """
 
