@@ -214,6 +214,23 @@ file_paths = ["compose.yaml"]
 ##
 
 [[stack]]
+name = "starling2mqtt"
+[stack.config]
+server = "app-stacks"
+poll_for_updates = true
+auto_update = true
+auto_update_all_services = true
+linked_repo = "docker"
+run_directory = "stacks/starling2mqtt"
+file_paths = ["compose.yaml"]
+environment = """
+STARLING2MQTT_API_KEY=[[STARLING2MQTT_API_KEY]]
+STARLING2MQTT_PASSWORD=[[STARLING2MQTT_PASSWORD]]
+"""
+
+##
+
+[[stack]]
 name = "transfersh"
 [stack.config]
 server = "app-stacks"

@@ -27,6 +27,7 @@ Homelab Docker stacks managed by [Komodo](https://komo.do), running on Proxmox L
 | retroarch-webdav | App stacks LXC | WebDAV access to RetroArch saves/states |
 | samba | App stacks LXC | Samba file share |
 | slash | App stacks LXC | Link shortener |
+| starling2mqtt | App stacks LXC | Starling Home Hub (Nest) to Home Assistant via MQTT |
 | transfersh | App stacks LXC | File transfer service |
 | writefreely | App stacks LXC | Blog platform |
 
