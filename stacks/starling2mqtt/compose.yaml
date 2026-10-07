@@ -1,0 +1,15 @@
+services:
+  starling2mqtt:
+    image: zackwag/starling2mqtt:latest
+    container_name: starling2mqtt
+    restart: unless-stopped
+    init: true
+    environment:
+      - STARLING_HOST=192.168.4.94
+      - STARLING_API_KEY=${STARLING2MQTT_API_KEY}
+      - MQTT_BROKER=192.168.4.90
+      - MQTT_USERNAME=starling2mqtt
+      - MQTT_PASSWORD=${STARLING2MQTT_PASSWORD}
+    volumes:
+      - /docker/starling2mqtt/config/config.yaml:/data/config.yaml:ro
+      - /docker/starling2mqtt/data:/data
