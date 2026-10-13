@@ -38,6 +38,7 @@ services:
       - 9876:3001
     environment:
       - TZ=America/New_York
+      - CADDY_UI_ADDITIONAL_LANGUAGES=de
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - /docker/caddy-ui:/etc/caddy-ui
