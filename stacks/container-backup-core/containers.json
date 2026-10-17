@@ -6,6 +6,12 @@
         "retention_days": 7
     },
     {
+        "container_name": "eero-ui",
+        "source_folder": "/source/eero-ui",
+        "destination_folder": "/destination/eero-ui",
+        "retention_days": 7
+    },
+    {
         "container_name": "homepage",
         "source_folder": "/source/homepage",
         "destination_folder": "/destination/homepage",

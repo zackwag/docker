@@ -19,6 +19,7 @@ Homelab Docker stacks managed by [Komodo](https://komo.do), running on Proxmox L
 | container-backup-caddy | Caddy LXC | Backup spoke for Caddy LXC |
 | container-backup-core | App stacks LXC | Backup hub for app stacks LXC |
 | ecobeealerts2mqtt | App stacks LXC | Ecobee alerts to Home Assistant via MQTT |
+| eero-ui | App stacks LXC | Eero mesh network dashboard |
 | homepage | App stacks LXC | Homepage dashboard |
 | it-tools | App stacks LXC | IT Tools developer utilities |
 | mqtt-explorer | App stacks LXC | MQTT Explorer broker browser |
@@ -77,6 +78,7 @@ Containers with persistent data:
 
 - `caddy` — Caddyfile, TLS data, logs
 - `caddy-ui-backend` — caddy-ui config
+- `eero-ui` — eero session and metrics history
 - `homepage` — dashboard config
 - `icecast` — icecast config
 - `darkice` — darkice config

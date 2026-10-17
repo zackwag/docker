@@ -1,0 +1,20 @@
+services:
+  eero-ui:
+    image: ghcr.io/fulviofreitas/eero-ui:latest
+    container_name: eero-ui
+    restart: unless-stopped
+    ports:
+      - 8128:8000
+    environment:
+      - TZ=America/New_York
+      - EERO_DASHBOARD_SESSION_SECRET=${EERO_UI_SESSION_SECRET}
+      - EERO_DASHBOARD_COLLECTION_INTERVAL=60
+      - EERO_DASHBOARD_METRICS_RETENTION=1y
+    volumes:
+      - /docker/eero-ui/data:/data
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
