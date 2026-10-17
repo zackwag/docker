@@ -103,6 +103,22 @@ ECOBEE_API_KEY=[[ECOBEE_API_KEY]]
 ##
 
 [[stack]]
+name = "eero-ui"
+[stack.config]
+server = "app-stacks"
+poll_for_updates = true
+auto_update = true
+auto_update_all_services = true
+linked_repo = "docker"
+run_directory = "stacks/eero-ui"
+file_paths = ["compose.yaml"]
+environment = """
+EERO_UI_SESSION_SECRET=[[EERO_UI_SESSION_SECRET]]
+"""
+
+##
+
+[[stack]]
 name = "homepage"
 [stack.config]
 server = "app-stacks"
