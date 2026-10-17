@@ -10,6 +10,7 @@ services:
       - EERO_DASHBOARD_SESSION_SECRET=${EERO_UI_SESSION_SECRET}
       - EERO_DASHBOARD_COLLECTION_INTERVAL=60
       - EERO_DASHBOARD_METRICS_RETENTION=1y
+      - EERO_DASHBOARD_EXPERIMENTAL_WRITES=true
     volumes:
       - /docker/eero-ui/data:/data
     healthcheck:
