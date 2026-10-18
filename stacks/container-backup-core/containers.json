@@ -6,9 +6,21 @@
         "retention_days": 7
     },
     {
+        "container_name": "ecobeealerts2mqtt",
+        "source_folder": "/source/ecobeealerts2mqtt",
+        "destination_folder": "/destination/ecobeealerts2mqtt",
+        "retention_days": 7
+    },
+    {
         "container_name": "eero-ui",
         "source_folder": "/source/eero-ui",
         "destination_folder": "/destination/eero-ui",
+        "retention_days": 7
+    },
+    {
+        "container_name": "fastchannels",
+        "source_folder": "/source/fast_channels",
+        "destination_folder": "/destination/fastchannels",
         "retention_days": 7
     },
     {
@@ -18,15 +30,27 @@
         "retention_days": 7
     },
     {
+        "container_name": "icecast",
+        "source_folder": "/source/icecast",
+        "destination_folder": "/destination/icecast",
+        "retention_days": 7
+    },
+    {
         "container_name": "mlbserver",
         "source_folder": "/source/mlbserver",
         "destination_folder": "/destination/mlbserver",
         "retention_days": 7
     },
     {
-        "container_name": "icecast",
-        "source_folder": "/source/icecast",
-        "destination_folder": "/destination/icecast",
+        "container_name": "mqtt-explorer",
+        "source_folder": "/source/mqtt-explorer",
+        "destination_folder": "/destination/mqtt-explorer",
+        "retention_days": 7
+    },
+    {
+        "container_name": "nut2mqtt",
+        "source_folder": "/source/nut2mqtt",
+        "destination_folder": "/destination/nut2mqtt",
         "retention_days": 7
     },
     {
@@ -39,6 +63,12 @@
         "container_name": "transfersh",
         "source_folder": "/source/transfersh/web",
         "destination_folder": "/destination/transfersh",
+        "retention_days": 7
+    },
+    {
+        "container_name": "starling2mqtt",
+        "source_folder": "/source/starling2mqtt",
+        "destination_folder": "/destination/starling2mqtt",
         "retention_days": 7
     },
     {

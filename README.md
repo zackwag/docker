@@ -78,12 +78,17 @@ Containers with persistent data:
 
 - `caddy` — Caddyfile, TLS data, logs
 - `caddy-ui-backend` — caddy-ui config
+- `darkice` — darkice config
+- `ecobeealerts2mqtt` — ecobee alerts bridge data
 - `eero-ui` — eero session and metrics history
+- `fastchannels` — FastChannels data
 - `homepage` — dashboard config
 - `icecast` — icecast config
-- `darkice` — darkice config
 - `mlbserver` — MLB account data
+- `mqtt-explorer` — MQTT Explorer settings
+- `nut2mqtt` — NUT config, bridge config and data
 - `slash` — link shortener database
+- `starling2mqtt` — bridge config and data
 - `transfersh` — uploaded files
 - `writefreely` — blog database and keys
 
