@@ -324,6 +324,21 @@ executions = [
 ##
 
 [[procedure]]
+name = "Prune Docker"
+description = "Removes unused images left behind by auto-updates."
+config.schedule = "Every day at 05:30"
+
+[[procedure.config.stage]]
+name = "Stage 1"
+enabled = true
+executions = [
+  { execution.type = "PruneImages", execution.params.server = "app-stacks", enabled = true },
+  { execution.type = "PruneImages", execution.params.server = "caddy", enabled = true }
+]
+
+##
+
+[[procedure]]
 name = "Rotate Server Keys"
 description = "Rotates all currently connected Server keys."
 tags = ["system"]
