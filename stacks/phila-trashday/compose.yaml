@@ -8,7 +8,6 @@ services:
     environment:
       - ALARM_TIME=20:00
     volumes:
-      - ./holidays.txt:/config/holidays.txt:ro
-      # Holds the saved home address. The container runs as UID 65534, so
-      # this directory needs `chown 65534:65534` once on the host.
+      # Holds the saved addresses. The container runs as UID 65534, so this
+      # directory needs `chown 65534:65534` once on the host.
       - /docker/phila-trashday/data:/data
