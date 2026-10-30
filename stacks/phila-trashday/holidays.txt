@@ -1,0 +1,17 @@
+# City holidays that affect trash and recycling collection.
+#
+# One holiday per line: a YYYY-MM-DD date, optionally followed by its name.
+# Anything after a # is a comment. Weekend dates are fine to list but don't
+# change anything, since only weekday holidays move pickups.
+#
+# phila.gov doesn't publish this list anywhere a script can read it, so
+# update it once a year from the city's holiday announcements. The service
+# re-reads it on every refresh, so no restart is needed, and /healthz warns
+# two months ahead when next year is missing.
+#
+# These are the holidays left in 2026 that match the schedule Waste
+# Collection Schedule computes from the city's own data.
+
+2026-11-11 Veterans Day
+2026-11-26 Thanksgiving Day
+2026-12-25 Christmas Day

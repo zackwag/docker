@@ -24,6 +24,7 @@ Homelab Docker stacks managed by [Komodo](https://komo.do), running on Proxmox L
 | it-tools | App stacks LXC | IT Tools developer utilities |
 | mqtt-explorer | App stacks LXC | MQTT Explorer broker browser |
 | nut2mqtt | App stacks LXC | NUT UPS status to Home Assistant via MQTT |
+| phila-trashday | App stacks LXC | Philadelphia trash and recycling day page and calendar feeds |
 | radio | App stacks LXC | Icecast + Darkice internet radio |
 | retroarch-webdav | App stacks LXC | WebDAV access to RetroArch saves/states |
 | samba | App stacks LXC | Samba file share |
