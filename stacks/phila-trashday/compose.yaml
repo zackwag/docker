@@ -6,7 +6,6 @@ services:
     ports:
       - 3138:8080
     environment:
-      - ALARM_TIME=20:00
       # Caddy serves saved addresses' feeds here, so iCloud and Skylight
       # can subscribe. The page and API stay on the LAN.
       - PUBLIC_URL=https://zackwag.com/public/trashday
