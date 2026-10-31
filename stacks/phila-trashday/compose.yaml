@@ -6,10 +6,6 @@ services:
     ports:
       - 3138:8080
     environment:
-      # Caddy serves saved addresses' feeds here, so iCloud and Skylight
-      # can subscribe. The page and API stay on the LAN.
       - PUBLIC_URL=https://zackwag.com/public/trashday
     volumes:
-      # Holds the saved addresses. The container runs as UID 65534, so this
-      # directory needs `chown 65534:65534` once on the host.
       - /docker/phila-trashday/data:/data
