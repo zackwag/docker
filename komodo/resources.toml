@@ -285,6 +285,25 @@ file_paths = ["compose.yaml"]
 
 ##
 
+[[stack]]
+name = "cync-lan"
+[stack.config]
+server = "app-stacks"
+poll_for_updates = true
+auto_update = true
+auto_update_all_services = true
+linked_repo = "docker"
+run_directory = "stacks/cync-lan"
+file_paths = ["compose.yaml"]
+environment = """
+CYNC_LAN_MQTT_PASSWORD=[[CYNC_LAN_MQTT_PASSWORD]]
+CYNC_ACCOUNT_USERNAME=[[CYNC_ACCOUNT_USERNAME]]
+CYNC_ACCOUNT_PASSWORD=[[CYNC_ACCOUNT_PASSWORD]]
+CYNC_SECRET_KEY=[[CYNC_SECRET_KEY]]
+"""
+
+##
+
 [[repo]]
 name = "docker"
 [repo.config]

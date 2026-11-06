@@ -1,0 +1,18 @@
+services:
+  cync-lan:
+    image: baudneo/cync-lan:latest
+    container_name: cync-lan
+    restart: unless-stopped
+    ports:
+      - "23779:23779"
+      - "23778:23778"
+    environment:
+      - CYNC_MQTT_HOST=192.168.4.90
+      - CYNC_MQTT_USER=cync-lan
+      - CYNC_MQTT_PASS=${CYNC_LAN_MQTT_PASSWORD}
+      - CYNC_ACCOUNT_USERNAME=${CYNC_ACCOUNT_USERNAME}
+      - CYNC_ACCOUNT_PASSWORD=${CYNC_ACCOUNT_PASSWORD}
+      - CYNC_SECRET_KEY=${CYNC_SECRET_KEY}
+      - TZ=America/New_York
+    volumes:
+      - /docker/cync-lan/config:/root/cync-lan/config
