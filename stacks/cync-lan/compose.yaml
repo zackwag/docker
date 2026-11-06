@@ -1,6 +1,6 @@
 services:
   cync-lan:
-    image: baudneo/cync-lan:latest
+    image: baudneo/cync-lan:v0.1.12
     container_name: cync-lan
     restart: unless-stopped
     ports:
