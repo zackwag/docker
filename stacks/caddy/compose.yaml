@@ -47,7 +47,7 @@ services:
     depends_on:
       - caddy
   caddy-ui-frontend:
-    image: zackwag/caddy-ui-frontend:edge
+    image: zackwag/caddy-ui-frontend:beta
     container_name: caddy-ui-frontend
     restart: unless-stopped
     ports:
