@@ -31,7 +31,7 @@ services:
     networks:
       - caddy-ui
   caddy-ui-backend:
-    image: zackwag/caddy-ui-backend:edge
+    image: zackwag/caddy-ui-backend:latest
     container_name: caddy-ui-backend
     restart: unless-stopped
     ports:
@@ -47,7 +47,7 @@ services:
     depends_on:
       - caddy
   caddy-ui-frontend:
-    image: zackwag/caddy-ui-frontend:edge
+    image: zackwag/caddy-ui-frontend:latest
     container_name: caddy-ui-frontend
     restart: unless-stopped
     ports:
