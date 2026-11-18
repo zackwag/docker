@@ -8,7 +8,7 @@ services:
       - 443:443
     environment:
       - CADDY_LOG_PATH=/var/log/caddy/access.log
-      - DOMAIN=zackwag.com
+    - DOMAIN=zackwag.com
       - EMAIL=zack@zackwag.com
       - INTERNAL_TLD=internal
       - TZ=America/New_York
@@ -31,7 +31,7 @@ services:
     networks:
       - caddy-ui
   caddy-ui-backend:
-    image: zackwag/caddy-ui-backend:beta
+    image: zackwag/caddy-ui-backend:edge
     container_name: caddy-ui-backend
     restart: unless-stopped
     ports:
@@ -47,7 +47,7 @@ services:
     depends_on:
       - caddy
   caddy-ui-frontend:
-    image: zackwag/caddy-ui-frontend:beta
+    image: zackwag/caddy-ui-frontend:edge
     container_name: caddy-ui-frontend
     restart: unless-stopped
     ports:
