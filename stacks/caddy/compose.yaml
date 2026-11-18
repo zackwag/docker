@@ -8,7 +8,7 @@ services:
       - 443:443
     environment:
       - CADDY_LOG_PATH=/var/log/caddy/access.log
-    - DOMAIN=zackwag.com
+      - DOMAIN=zackwag.com
       - EMAIL=zack@zackwag.com
       - INTERNAL_TLD=internal
       - TZ=America/New_York
