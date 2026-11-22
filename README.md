@@ -23,6 +23,7 @@ Homelab Docker stacks managed by [Komodo](https://komo.do), running on Proxmox L
 | eero-ui | App stacks LXC | Eero mesh network dashboard |
 | homepage | App stacks LXC | Homepage dashboard |
 | it-tools | App stacks LXC | IT Tools developer utilities |
+| miniflux | App stacks LXC | Miniflux RSS reader + Postgres |
 | mqtt-explorer | App stacks LXC | MQTT Explorer broker browser |
 | nut2mqtt | App stacks LXC | NUT UPS status to Home Assistant via MQTT |
 | phila-trashday | App stacks LXC | Philadelphia trash and recycling day page and calendar feeds |
@@ -87,6 +88,7 @@ Containers with persistent data:
 - `homepage` — dashboard config
 - `icecast` — icecast config
 - `mlbserver` — MLB account data
+- `miniflux-db` — Miniflux feeds, entries and users
 - `mqtt-explorer` — MQTT Explorer settings
 - `nut2mqtt` — NUT config, bridge config and data
 - `slash` — link shortener database
