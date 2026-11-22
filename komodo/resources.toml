@@ -145,6 +145,24 @@ file_paths = ["compose.yaml"]
 ##
 
 [[stack]]
+name = "miniflux"
+[stack.config]
+server = "app-stacks"
+poll_for_updates = true
+auto_update = true
+auto_update_all_services = true
+linked_repo = "docker"
+run_directory = "stacks/miniflux"
+file_paths = ["compose.yaml"]
+environment = """
+MINIFLUX_ADMIN_USERNAME=[[MINIFLUX_ADMIN_USERNAME]]
+MINIFLUX_ADMIN_PASSWORD=[[MINIFLUX_ADMIN_PASSWORD]]
+MINIFLUX_DB_PASSWORD=[[MINIFLUX_DB_PASSWORD]]
+"""
+
+##
+
+[[stack]]
 name = "mqtt-explorer"
 [stack.config]
 server = "app-stacks"

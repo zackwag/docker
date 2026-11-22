@@ -42,6 +42,12 @@
         "retention_days": 7
     },
     {
+        "container_name": "miniflux-db",
+        "source_folder": "/source/miniflux/db",
+        "destination_folder": "/destination/miniflux",
+        "retention_days": 7
+    },
+    {
         "container_name": "mqtt-explorer",
         "source_folder": "/source/mqtt-explorer",
         "destination_folder": "/destination/mqtt-explorer",
