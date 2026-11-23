@@ -60,6 +60,12 @@
         "retention_days": 7
     },
     {
+        "container_name": "prismcast",
+        "source_folder": "/source/prismcast",
+        "destination_folder": "/destination/prismcast",
+        "retention_days": 7
+    },
+    {
         "container_name": "slash",
         "source_folder": "/source/slash",
         "destination_folder": "/destination/slash",

@@ -202,6 +202,22 @@ file_paths = ["compose.yaml"]
 ##
 
 [[stack]]
+name = "prismcast"
+[stack.config]
+server = "app-stacks"
+poll_for_updates = true
+auto_update = true
+auto_update_all_services = true
+linked_repo = "docker"
+run_directory = "stacks/prismcast"
+file_paths = ["compose.yaml"]
+environment = """
+PRISMCAST_NOVNC_PASSWORD=[[PRISMCAST_NOVNC_PASSWORD]]
+"""
+
+##
+
+[[stack]]
 name = "radio"
 [stack.config]
 server = "app-stacks"

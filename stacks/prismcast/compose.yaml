@@ -1,0 +1,22 @@
+services:
+  prismcast:
+    image: ghcr.io/hjdhjd/prismcast:latest
+    container_name: prismcast
+    hostname: prismcast
+    restart: unless-stopped
+    shm_size: 2gb
+    ports:
+      - 5589:5589
+      - 6080:6080
+    volumes:
+      - /docker/prismcast:/root/.prismcast
+    environment:
+      - TZ=America/New_York
+      - NOVNC_PASSWORD=${PRISMCAST_NOVNC_PASSWORD}
+      - HDHR_ENABLED=false
+    healthcheck:
+      test: ["CMD", "wget", "-q", "--spider", "http://localhost:5589/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s

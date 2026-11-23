@@ -27,6 +27,7 @@ Homelab Docker stacks managed by [Komodo](https://komo.do), running on Proxmox L
 | mqtt-explorer | App stacks LXC | MQTT Explorer broker browser |
 | nut2mqtt | App stacks LXC | NUT UPS status to Home Assistant via MQTT |
 | phila-trashday | App stacks LXC | Philadelphia trash and recycling day page and calendar feeds |
+| prismcast | App stacks LXC | Chrome-based live TV capture for Channels DVR |
 | radio | App stacks LXC | Icecast + Darkice internet radio |
 | retroarch-webdav | App stacks LXC | WebDAV access to RetroArch saves/states |
 | samba | App stacks LXC | Samba file share |
@@ -91,6 +92,7 @@ Containers with persistent data:
 - `miniflux-db` — Miniflux feeds, entries and users
 - `mqtt-explorer` — MQTT Explorer settings
 - `nut2mqtt` — NUT config, bridge config and data
+- `prismcast` — PrismCast config, channels and Chrome profile (TV provider logins)
 - `slash` — link shortener database
 - `starling2mqtt` — bridge config and data
 - `transfersh` — uploaded files
