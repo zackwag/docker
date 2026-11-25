@@ -14,7 +14,7 @@ Homelab Docker stacks managed by [Komodo](https://komo.do), running on Proxmox L
 | Stack | Host | Description |
 |-------|------|-------------|
 | caddy | Caddy LXC | Caddy reverse proxy + caddy-ui |
-| channels-addons | App stacks LXC | MLBserver + FastChannels for Channels DVR |
+| channels-addons | App stacks LXC | MLBserver + FastChannels + PrismCast for Channels DVR |
 | channels2mqtt | App stacks LXC | Channels DVR to Home Assistant via MQTT |
 | cync-lan | App stacks LXC | Cync/GE smart lights local LAN control via MQTT |
 | container-backup-caddy | Caddy LXC | Backup spoke for Caddy LXC |
@@ -27,7 +27,6 @@ Homelab Docker stacks managed by [Komodo](https://komo.do), running on Proxmox L
 | mqtt-explorer | App stacks LXC | MQTT Explorer broker browser |
 | nut2mqtt | App stacks LXC | NUT UPS status to Home Assistant via MQTT |
 | phila-trashday | App stacks LXC | Philadelphia trash and recycling day page and calendar feeds |
-| prismcast | App stacks LXC | Chrome-based live TV capture for Channels DVR |
 | radio | App stacks LXC | Icecast + Darkice internet radio |
 | retroarch-webdav | App stacks LXC | WebDAV access to RetroArch saves/states |
 | samba | App stacks LXC | Samba file share |
