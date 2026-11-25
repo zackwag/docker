@@ -14,7 +14,7 @@ Homelab Docker stacks managed by [Komodo](https://komo.do), running on Proxmox L
 | Stack | Host | Description |
 |-------|------|-------------|
 | caddy | Caddy LXC | Caddy reverse proxy + caddy-ui |
-| channels-addons | App stacks LXC | MLBserver + FastChannels for Channels DVR |
+| channels-addons | App stacks LXC | MLBserver + FastChannels + PrismCast for Channels DVR |
 | channels2mqtt | App stacks LXC | Channels DVR to Home Assistant via MQTT |
 | cync-lan | App stacks LXC | Cync/GE smart lights local LAN control via MQTT |
 | container-backup-caddy | Caddy LXC | Backup spoke for Caddy LXC |
@@ -91,6 +91,7 @@ Containers with persistent data:
 - `miniflux-db` — Miniflux feeds, entries and users
 - `mqtt-explorer` — MQTT Explorer settings
 - `nut2mqtt` — NUT config, bridge config and data
+- `prismcast` — PrismCast config, channels and Chrome profile (TV provider logins)
 - `slash` — link shortener database
 - `starling2mqtt` — bridge config and data
 - `transfersh` — uploaded files
