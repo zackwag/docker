@@ -88,6 +88,21 @@ file_paths = ["compose.yaml"]
 ##
 
 [[stack]]
+name = "criterion-bridge"
+[stack.config]
+server = "app-stacks"
+linked_repo = "criterion-bridge"
+file_paths = ["compose.example.yaml"]
+run_build = true
+environment = """
+CRITERION_BRIDGE_PORT=3140
+CRITERION_EMAIL=[[CRITERION_EMAIL]]
+CRITERION_PASSWORD=[[CRITERION_PASSWORD]]
+"""
+
+##
+
+[[stack]]
 name = "ecobeealerts2mqtt"
 [stack.config]
 server = "app-stacks"
@@ -314,6 +329,14 @@ auto_update_all_services = true
 linked_repo = "docker"
 run_directory = "stacks/writefreely"
 file_paths = ["compose.yaml"]
+
+##
+
+[[repo]]
+name = "criterion-bridge"
+[repo.config]
+git_account = "zackwag"
+repo = "zackwag/criterion-bridge"
 
 ##
 
