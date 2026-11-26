@@ -1,0 +1,10 @@
+services:
+  criterion-bridge:
+    image: zackwag/criterion-bridge:latest
+    container_name: criterion-bridge
+    restart: unless-stopped
+    ports:
+      - 3140:8080
+    environment:
+      - CRITERION_EMAIL=${CRITERION_EMAIL}
+      - CRITERION_PASSWORD=${CRITERION_PASSWORD}
