@@ -19,7 +19,7 @@ Homelab Docker stacks managed by [Komodo](https://komo.do), running on Proxmox L
 | cync-lan | App stacks LXC | Cync/GE smart lights local LAN control via MQTT |
 | container-backup-caddy | Caddy LXC | Backup spoke for Caddy LXC |
 | container-backup-core | App stacks LXC | Backup hub for app stacks LXC |
-| criterion-bridge | App stacks LXC | Criterion Channel 24/7 stream and guide for Channels DVR, signed in with my subscription |
+| criterion-bridge | App stacks LXC | Criterion Channel 24/7 stream and guide for Channels DVR |
 | ecobeealerts2mqtt | App stacks LXC | Ecobee alerts to Home Assistant via MQTT |
 | eero-ui | App stacks LXC | Eero mesh network dashboard |
 | homepage | App stacks LXC | Homepage dashboard |
