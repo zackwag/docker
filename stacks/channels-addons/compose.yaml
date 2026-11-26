@@ -55,6 +55,10 @@ services:
     hostname: prismcast
     restart: unless-stopped
     shm_size: 2gb
+    # workaround: x11vnc's single-threaded poll loop spins at 100% CPU on fast
+    # LXC framebuffers, starving VNC client connections. -threads decouples
+    # client handling. Remove when upstream adds -threads (or an env var for it).
+    entrypoint: ["/bin/bash", "-c", "sed -i 's/x11vnc -display/x11vnc -threads -display/g' /usr/local/bin/docker-entrypoint.sh && exec /usr/local/bin/docker-entrypoint.sh"]
     ports:
       - 5589:5589
       - 6080:6080
