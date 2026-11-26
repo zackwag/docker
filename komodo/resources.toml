@@ -292,6 +292,19 @@ file_paths = ["compose.yaml"]
 ##
 
 [[stack]]
+name = "wfmzplus-bridge"
+[stack.config]
+server = "app-stacks"
+linked_repo = "wfmzplus-bridge"
+file_paths = ["compose.example.yaml"]
+run_build = true
+environment = """
+WFMZPLUS_BRIDGE_PORT=3139
+"""
+
+##
+
+[[stack]]
 name = "writefreely"
 [stack.config]
 server = "app-stacks"
@@ -309,6 +322,14 @@ name = "docker"
 [repo.config]
 git_account = "zackwag"
 repo = "zackwag/docker"
+
+##
+
+[[repo]]
+name = "wfmzplus-bridge"
+[repo.config]
+git_account = "zackwag"
+repo = "zackwag/wfmzplus-bridge"
 
 ##
 

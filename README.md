@@ -33,6 +33,7 @@ Homelab Docker stacks managed by [Komodo](https://komo.do), running on Proxmox L
 | slash | App stacks LXC | Link shortener |
 | starling2mqtt | App stacks LXC | Starling Home Hub (Nest) to Home Assistant via MQTT |
 | transfersh | App stacks LXC | File transfer service |
+| wfmzplus-bridge | App stacks LXC | WFMZ+ live channels as an M3U playlist for Channels DVR, built from the private wfmzplus-bridge repo |
 | writefreely | App stacks LXC | Blog platform |
 
 ## Repository Structure
