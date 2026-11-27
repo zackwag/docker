@@ -8,3 +8,4 @@ services:
     environment:
       - CRITERION_EMAIL=${CRITERION_EMAIL}
       - CRITERION_PASSWORD=${CRITERION_PASSWORD}
+      - TMDB_API_KEY=${TMDB_API_KEY}
