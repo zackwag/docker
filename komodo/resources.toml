@@ -41,6 +41,9 @@ environment = """
 MLB_USERNAME=[[MLB_USERNAME]]
 MLB_PASSWORD=[[MLB_PASSWORD]]
 PRISMCAST_NOVNC_PASSWORD=[[PRISMCAST_NOVNC_PASSWORD]]
+CRITERION_EMAIL=[[CRITERION_EMAIL]]
+CRITERION_PASSWORD=[[CRITERION_PASSWORD]]
+TMDB_API_KEY=[[TMDB_API_KEY]]
 """
 
 ##
@@ -84,24 +87,6 @@ auto_update_all_services = true
 linked_repo = "docker"
 run_directory = "stacks/container-backup-core"
 file_paths = ["compose.yaml"]
-
-##
-
-[[stack]]
-name = "criterion-bridge"
-[stack.config]
-server = "app-stacks"
-poll_for_updates = true
-auto_update = true
-auto_update_all_services = true
-linked_repo = "docker"
-run_directory = "stacks/criterion-bridge"
-file_paths = ["compose.yaml"]
-environment = """
-CRITERION_EMAIL=[[CRITERION_EMAIL]]
-CRITERION_PASSWORD=[[CRITERION_PASSWORD]]
-TMDB_API_KEY=[[TMDB_API_KEY]]
-"""
 
 ##
 
